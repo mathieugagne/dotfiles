@@ -63,6 +63,8 @@ git clone git@github.com:junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 ### ruby
 
 ```
+sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 
