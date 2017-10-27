@@ -89,5 +89,5 @@ su - ${USER}
 ### Rails pre-requesites
 
 ```
-sudo apt-get install -y libpq-dev
+sudo apt-get install -y libpq-dev sqlite3
 ```
