@@ -1,7 +1,9 @@
 # Workstation Install
 
+### drivers
+
 ```
-# nvidia drivers
+# nvidia drivers (GeForce GTX 1070)
 sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt-get update
 sudo apt-get install nvidia-367
@@ -47,8 +49,8 @@ git clone https://github.com/tpope/vim-fugitive
 git clone https://github.com/altercation/vim-colors-solarized
 git clone https://github.com/scrooloose/nerdtree
 git clone https://github.com/scrooloose/syntastic
-git clone https://github.com/myusuf3/numbers.vim
 git clone https://github.com/airblade/vim-gitgutter
+git clone https://github.com/tpope/vim-sensible.git
 ```
 
 ### fzf
