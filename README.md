@@ -14,7 +14,7 @@ sudo apt-get install nvidia-367
 ```
 # generic
 sudo apt-get update
-sudo apt-get install -y wget htop tree curl git vim nodejs
+sudo apt-get install -y wget htop tree curl git vim
 
 # utilities
 sudo apt-get install -y bmon iftop
@@ -75,6 +75,15 @@ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 ```
+
+
+### nodejs
+
+```
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
 
 ### docker
 
