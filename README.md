@@ -14,7 +14,7 @@ sudo apt-get install nvidia-367
 ```
 # generic
 sudo apt-get update
-sudo apt-get install -y wget htop tree curl git vim
+sudo apt-get install -y wget htop tree curl git vim nodejs
 
 # utilities
 sudo apt-get install -y bmon iftop
