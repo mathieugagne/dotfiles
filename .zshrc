@@ -6,3 +6,5 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
