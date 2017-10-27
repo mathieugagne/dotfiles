@@ -9,13 +9,15 @@ sudo apt-get update
 sudo apt-get install nvidia-367
 ```
 
+### packages
+
 ```
 # generic
 sudo apt-get update
-sudo apt-get install wget htop tree curl git vim
+sudo apt-get install -y wget htop tree curl git vim
 
 # utilities
-sudo apt-get install bmon iftop
+sudo apt-get install -y bmon iftop
 ```
 
 ### dotfiles
