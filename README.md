@@ -40,6 +40,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/mas
 ```
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
+cd ~/.vim/bundle
+git clone https://github.com/tpope/vim-fugitive
+git clone https://github.com/altercation/vim-colors-solarized
+git clone https://github.com/scrooloose/nerdtree
+git clone https://github.com/scrooloose/syntastic
+git clone https://github.com/myusuf3/numbers.vim
 ```
 
 ### fzf
