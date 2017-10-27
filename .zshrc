@@ -9,5 +9,6 @@ source $HOME/.bash_aliases
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
