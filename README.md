@@ -47,6 +47,8 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 ```
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+git clone git@github.com:junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 ```
 
 ### ruby
