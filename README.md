@@ -10,7 +10,7 @@ sudo apt-get install nvidia-367
 ```
 # generic
 sudo apt-get update
-sudo apt-get install wget htop tree curl git
+sudo apt-get install wget htop tree curl git vim
 
 # utilities
 sudo apt-get install bmon iftop
@@ -34,6 +34,14 @@ chsh -s $(which zsh)
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+
+### vim
+
+```
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+```
+
 
 ### ruby
 
