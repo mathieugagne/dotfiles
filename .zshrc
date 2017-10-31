@@ -11,4 +11,8 @@ source $HOME/.bash_aliases
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
+# FZF
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# pip
+export PATH="~/.local/bin:$PATH"
