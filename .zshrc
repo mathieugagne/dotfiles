@@ -15,4 +15,4 @@ eval "$(rbenv init -)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # pip
-export PATH="~/.local/bin:$PATH"
+[ -f ~/.local/bin ] && export PATH="~/.local/bin:$PATH"
