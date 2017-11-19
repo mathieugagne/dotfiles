@@ -53,6 +53,7 @@ git clone https://github.com/scrooloose/nerdtree
 git clone https://github.com/scrooloose/syntastic
 git clone https://github.com/airblade/vim-gitgutter
 git clone https://github.com/tpope/vim-sensible.git
+git clone git@github.com:tpope/vim-fugitive.git
 ```
 
 ### fzf
