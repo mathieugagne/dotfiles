@@ -42,6 +42,12 @@ set t_Co=256
 set background=dark
 colorscheme solarized
 
+" Add fzf if installed using git
+set rtp+=~/.fzf
+
+" Add fzf if installed using Homebrew
+set rtp+=/usr/local/opt/fzf
+
 " to keep whitespace highlighting on recognized file types
 au FileType * highlight WhitespaceEOL ctermbg=240 guibg=red
 
