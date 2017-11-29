@@ -60,3 +60,9 @@ let g:jsx_ext_required=0
 " Panes should split to the right, or to the bottom
 set splitbelow
 set splitright
+
+" Leader
+let mapleader = ","
+
+" Mappings
+map <Leader>t :Files<CR>
