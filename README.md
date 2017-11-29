@@ -54,6 +54,8 @@ git clone https://github.com/scrooloose/syntastic
 git clone https://github.com/airblade/vim-gitgutter
 git clone https://github.com/tpope/vim-sensible.git
 git clone git@github.com:tpope/vim-fugitive.git
+git clone git@github.com:godlygeek/tabular.git
+git clone git@github.com:ngmy/vim-rubocop.git
 ```
 
 ### fzf
