@@ -66,9 +66,11 @@ let mapleader = ","
 
 " Mappings
 map <Leader>t :Files<CR>
-if exists(":Tabularize")
-  nmap <Leader>a= :Tabularize /=<CR>
-  vmap <Leader>a= :Tabularize /=<CR>
-  nmap <Leader>a: :Tabularize /:\zs<CR>
-  vmap <Leader>a: :Tabularize /:\zs<CR>
-endif
+" Tabularize
+nmap <Leader>a= :Tabularize /=<CR>
+vmap <Leader>a= :Tabularize /=<CR>
+nmap <Leader>a: :Tabularize /:\zs<CR>
+vmap <Leader>a: :Tabularize /:\zs<CR>
+" EasyMotion
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+nmap <Leader>f <Plug>(easymotion-overwin-f2)
