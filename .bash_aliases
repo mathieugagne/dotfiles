@@ -35,3 +35,4 @@ alias ee="subl -a ."
 # git
 alias gbclean="git checkout master && git branch --merged | grep -v master | xargs git branch -d"
 alias gcmgs="gcmsg"
+alias gg="git grep"
