@@ -1,4 +1,5 @@
 alias cdw="cd ~/workspace/"
+alias cdp="cd ~/personal/"
 
 alias ll="ls -lAh"
 
