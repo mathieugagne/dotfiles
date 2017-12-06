@@ -17,7 +17,7 @@ alias spec='spec --color --format specdoc'
 # Rails server
 alias rs='bin/rails s'
 alias rc='bin/rails c'
-alias rp='RAILS_ENV=test bin/rspec'
+alias rp='bundle exec rspec'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
 
