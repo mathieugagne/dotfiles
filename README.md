@@ -57,6 +57,7 @@ git clone git@github.com:tpope/vim-fugitive.git
 git clone git@github.com:godlygeek/tabular.git
 git clone git@github.com:ngmy/vim-rubocop.git
 git clone https://github.com/easymotion/vim-easymotion
+git clone https://github.com/leafgarland/typescript-vim.git
 ```
 
 ### fzf
