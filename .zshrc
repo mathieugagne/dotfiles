@@ -7,6 +7,8 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
 
+export EDITOR=vim
+
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
