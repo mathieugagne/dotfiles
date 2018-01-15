@@ -40,3 +40,6 @@ alias ee="subl -a ."
 alias gbclean="git checkout master && git branch --merged | grep -v master | xargs git branch -d"
 alias gcmgs="gcmsg"
 alias gg="git grep"
+
+# Fixes
+alias fix_corrupt_history=". ~/dotfiles/fix_corrupt_history.sh"
