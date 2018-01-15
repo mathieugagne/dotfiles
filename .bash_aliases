@@ -21,6 +21,10 @@ alias rp='bundle exec rspec'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
 
+# js
+alias p='./node_modules/.bin/prettier'
+alias pw='./node_modules/.bin/prettier --write'
+
 # bundle
 alias be="bundle exec"
 alias fs="be foreman start"
