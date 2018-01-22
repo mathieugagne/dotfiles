@@ -23,7 +23,9 @@ alias rua='bundle exec rubocop --auto-gen-config'
 
 # js
 alias p='./node_modules/.bin/prettier'
-alias pw='./node_modules/.bin/prettier --write'
+pw() {
+  p --write "$1/**/*";
+}
 
 # bundle
 alias be="bundle exec"
