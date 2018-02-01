@@ -1,18 +1,5 @@
 # Workstation Install
 
-## generic
-
-```
-sudo apt-get update
-sudo apt-get install wget htop tree curl git zsh
-```
-
-# utilities
-
-```
-sudo apt-get install bmon iftop
-```
-
 ## nvidia drivers
 
 https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver
@@ -20,7 +7,7 @@ https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver
 1. Install some packages for build kernel:
 
 ```
-sudo apt-get install dkms build-essential linux-headers-generic
+sudo apt install dkms build-essential linux-headers-generic
 ```
 
 2. Block and disable nouveau kernel driver:
