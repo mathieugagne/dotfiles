@@ -1,23 +1,10 @@
 # Workstation Install
 
-### drivers
-
-```
-# nvidia drivers (GeForce GTX 1070)
-sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt-get update
-sudo apt-get install nvidia-367
-```
-
 ### packages
 
 ```
-# generic
-sudo apt-get update
-sudo apt-get install -y wget htop tree curl git vim
-
-# utilities
-sudo apt-get install -y bmon iftop
+sudo apt update
+sudo apt install -y wget htop tree curl git vim bmon iftop
 ```
 
 ### dotfiles
@@ -33,11 +20,11 @@ ln -fs ~/dotfiles/.vimrc ~/.vimrc
 
 ### zsh
 
-```
-sudo apt-get install zsh
-chsh -s $(which zsh)
-# logout
+Requires login in and out
 
+```
+sudo apt install zsh
+chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
 
@@ -73,11 +60,11 @@ git clone git@github.com:junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 ### ruby
 
 ```
-sudo apt-get install -y libssl-dev libreadline-dev zlib1g-dev
+sudo apt install -y libssl-dev libreadline-dev zlib1g-dev
 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-
+source ~/.zshrc
 mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 ```
@@ -87,7 +74,7 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 
 ```
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-sudo apt-get install -y nodejs
+sudo apt install -y nodejs
 ```
 
 
@@ -96,8 +83,8 @@ sudo apt-get install -y nodejs
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
-sudo apt-get update
-sudo apt-get install -y docker-ce
+sudo apt update
+sudo apt install -y docker-ce
 
 sudo usermod -aG docker ${USER}
 su - ${USER}
@@ -106,7 +93,7 @@ su - ${USER}
 ### Rails pre-requesites
 
 ```
-sudo apt-get install -y libpq-dev libsqlite3-dev
+sudo apt install -y libpq-dev libsqlite3-dev
 ```
 
 ### Sublime Text 3
@@ -116,11 +103,11 @@ sudo apt-get install -y libpq-dev libsqlite3-dev
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
 # Ensure apt is set up to work with https sources:
-sudo apt-get install y apt-transport-https
+sudo apt install -y apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
-sudo apt-get update
-sudo apt-get install -y sublime-text
+sudo apt update
+sudo apt install -y sublime-text
 ```
 
 ### Spotify
@@ -133,8 +120,8 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB31
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
 
 # 3. Update list of available packages
-sudo apt-get update
+sudo apt update
 
 # 4. Install Spotify
-sudo apt-get install spotify-client
+sudo apt install spotify-client
 ```
