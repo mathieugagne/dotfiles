@@ -99,13 +99,9 @@ sudo apt install -y libpq-dev libsqlite3-dev
 ### Sublime Text 3
 
 ```
-# Install the GPG key:
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-
-# Ensure apt is set up to work with https sources:
 sudo apt install -y apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-
 sudo apt update
 sudo apt install -y sublime-text
 ```
@@ -113,15 +109,8 @@ sudo apt install -y sublime-text
 ### Spotify
 
 ```
-# 1. Add the Spotify repository signing keys to be able to verify downloaded packages
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886 0DF731E45CE24F27EEEB1450EFDC8610341D9410
-
-# 2. Add the Spotify repository
 echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
-
-# 3. Update list of available packages
 sudo apt update
-
-# 4. Install Spotify
-sudo apt install spotify-client
+sudo apt install -y spotify-client
 ```
