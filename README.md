@@ -4,7 +4,7 @@
 
 ```
 sudo apt update
-sudo apt install -y wget htop tree curl git vim bmon iftop
+sudo apt install -y wget htop tree curl git vim bmon iftop xclip
 ```
 
 ### dotfiles
