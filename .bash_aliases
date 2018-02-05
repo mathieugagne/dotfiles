@@ -3,6 +3,9 @@ alias cdp="cd ~/personal/"
 
 alias ll="ls -lAh"
 
+# Utilities
+alias xclip="xclip -selection c"
+
 # Get disk space usage by folder, for humans
 # du -Pshx /* 2>/dev/null
 
