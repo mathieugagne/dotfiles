@@ -46,6 +46,7 @@ alias gbclean="git checkout master && git branch --merged | grep -v master | xar
 alias gbpurge="git branch | grep -v "master" | xargs git branch -D"
 alias gcmgs="gcmsg"
 alias gg="git grep"
+alias ggpush!="ggpush --force"
 
 # Fixes
 alias fix_corrupt_history=". ~/dotfiles/fix_corrupt_history.sh"
