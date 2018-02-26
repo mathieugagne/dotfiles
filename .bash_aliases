@@ -47,6 +47,7 @@ alias gbpurge="git branch | grep -v "master" | xargs git branch -D"
 alias gcmgs="gcmsg"
 alias gg="git grep"
 alias ggpush!="ggpush --force"
+alias grho="git reset --hard origin/$(git_current_branch)"
 
 # Fixes
 alias fix_corrupt_history=". ~/dotfiles/fix_corrupt_history.sh"
