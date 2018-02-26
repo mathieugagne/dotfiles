@@ -18,3 +18,7 @@ eval "$(rbenv init -)"
 
 # pip
 [ -f ~/.local/bin ] && export PATH="~/.local/bin:$PATH"
+
+# Set cap locks as escape for easy vim
+setxkbmap -option caps:swapescape
+
