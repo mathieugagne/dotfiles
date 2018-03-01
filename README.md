@@ -67,7 +67,7 @@ sudo su
 dpkg -i ./keyring.deb
 echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" >> /etc/apt/sources.list.d/sur5r-i3.list
 apt update
-apt install i3
+apt install i3 nitrogen compton feh
 exit
 ```
 
