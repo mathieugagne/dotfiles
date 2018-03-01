@@ -58,6 +58,19 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 git clone git@github.com:junegunn/fzf.vim ~/.vim/bundle/fzf.vim
 ```
 
+### i3
+
+```
+/usr/lib/apt/apt-helper download-file http://debian.sur5r.net/i3/pool/main/s/sur5r-keyring/sur5r-keyring_2018.01.30_all.deb keyring.deb
+SHA256:baa43dbbd7232ea2b5444cae238d53bebb9d34601cc000e82f11111b1889078a
+sudo su
+dpkg -i ./keyring.deb
+echo "deb http://debian.sur5r.net/i3/ $(grep '^DISTRIB_CODENAME=' /etc/lsb-release | cut -f2 -d=) universe" >> /etc/apt/sources.list.d/sur5r-i3.list
+apt update
+apt install i3
+exit
+```
+
 ### ruby
 
 ```
@@ -70,14 +83,12 @@ mkdir -p "$(rbenv root)"/plugins
 git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
 ```
 
-
 ### nodejs
 
 ```
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt install -y nodejs
 ```
-
 
 ### docker
 
