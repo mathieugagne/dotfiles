@@ -17,6 +17,7 @@ ln -fs ~/dotfiles/.bash_aliases ~/.bash_aliases
 ln -fs ~/dotfiles/.zshrc ~/.zshrc
 ln -fs ~/dotfiles/.vimrc ~/.vimrc
 ln -fs ~/dotfiles/i3/config ~/.config/i3/config
+ln -fs ~/dotfiles/.ssh/config ~/.ssh/config
 ```
 
 ### zsh
