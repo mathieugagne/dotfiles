@@ -19,15 +19,15 @@ alias spec='spec --color --format specdoc'
 
 # Rails server
 alias rs='bin/rails s'
-alias rc='bin/rails c'
+alias rc='SKIP_YARN_INTEGRITY_CHECK=true bin/rails c'
 alias rp='bundle exec rspec'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
 
 # js
-alias p='./node_modules/.bin/prettier'
 pw() {
-  p --write "$1/**/*.tsx";
+  ./node_modules/.bin/tslint --fix "$1/**/*.tsx";
+  ./node_modules/.bin/prettier --write "$1/**/*.tsx";
 }
 
 # bundle
