@@ -26,6 +26,7 @@ alias rua='bundle exec rubocop --auto-gen-config'
 
 # js
 pw() {
+  ./node_modules/.bin/stylelint --fix "$1/**/*.scss";
   ./node_modules/.bin/tslint --fix "$1/**/*.tsx";
   ./node_modules/.bin/prettier --write "$1/**/*.tsx";
 }
