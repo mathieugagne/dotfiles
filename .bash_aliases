@@ -20,7 +20,7 @@ alias spec='spec --color --format specdoc'
 # Rails server
 alias rs='bin/rails s'
 alias rc='SKIP_YARN_INTEGRITY_CHECK=true bin/rails c'
-alias rp='bundle exec rspec'
+alias rp='bin/rspec'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
 
