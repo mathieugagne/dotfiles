@@ -21,6 +21,7 @@ alias spec='spec --color --format specdoc'
 alias rs='bin/rails s'
 alias rc='SKIP_YARN_INTEGRITY_CHECK=true bin/rails c'
 alias rp='bin/rspec'
+alias rsp='bin/rspec spec/models spec/services spec/graphql spec/workers'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
 
