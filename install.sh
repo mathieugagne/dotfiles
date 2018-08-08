@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
 sudo apt update
-sudo apt install -y wget htop tree curl git vim bmon iftop xclip
+sudo apt install -y wget htop tree curl git vim bmon iftop xclip jq
 
 shell/install.sh
 fonts/install.sh
