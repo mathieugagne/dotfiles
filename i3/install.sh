@@ -8,3 +8,6 @@ sudo apt update
 sudo apt install i3 nitrogen compton feh polybar
 ln -fs ~/dotfiles/i3/config ~/.config/i3/config
 ln -fs ~/dotfiles/i3/polybar/config ~/.config/polybar/config
+
+# https://faq.i3wm.org/question/1/how-can-i-get-rid-of-the-nautilus-desktop-window.1.html
+gsettings set org.gnome.desktop.background show-desktop-icons false
