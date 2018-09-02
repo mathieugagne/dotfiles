@@ -24,6 +24,7 @@ client.urgent #d33682 #d33682 #fdf6e3 #dc322f
 exec feh --bg-scale ~/dotfiles/pictures/desktop-background.jpg
 exec nitrogen --restore
 exec --no-startup-id compton
+exec_always --no-startup-id numlockx on
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
