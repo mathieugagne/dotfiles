@@ -1,13 +1,9 @@
 #!/usr/bin/env sh
 
-# Install fontawesome
-sudo mkdir -p /usr/share/fonts/opentype/fontawesome
-sudo cp ~/dotfiles/fonts/fontawesome-free-5.3.1-desktop/otfs/* /usr/share/fonts/opentype/fontawesome/
+cp ~/dotfiles/fonts/fontawesome-free-5.3.1-desktop/otfs/*.otf ~/.local/share/fonts/
+cp ~/dotfiles/fonts/fontawesome/*.ttf ~/.local/share/fonts/
+cp ~/dotfiles/fonts/monofur/*.ttf ~/.local/share/fonts/
+cp ~/dotfiles/fonts/hack/*.ttf ~/.local/share/fonts/
 
-# Install monofur
-sudo mkdir -p /usr/share/fonts/truetype/monofur
-sudo cp ~/dotfiles/fonts/monofur/*.ttf /usr/share/fonts/truetype/monofur/
-
-# Install hack
-sudo mkdir -p /usr/share/fonts/truetype/hack
-sudo cp ~/dotfiles/fonts/hack/*.ttf /usr/share/fonts/truetype/hack/
+# Build font information cache files
+fc-cache -fv
