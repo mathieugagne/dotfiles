@@ -1,162 +1,173 @@
-[bar/white]
+;=====================================================
+;
+; Polybar config v1.0
+; by s1amber(Adrian Karbowniczyn)
+;
+; For more info visit: https://github.com/jaagr/polybar/
+;
+;=====================================================
 
-;------------;
-; DIMENSIONS ;
-;------------;
+[colors]
+background = #232323
+background-alt = #444
+foreground = #F3E5DA
+foreground-alt = #555
+primary = #F3E5DA
+secondary = #e60053
+alert = #bd2c40
 
+[bar/top]
+;monitor = DVI-D-0
 width = 100%
-height = 20
-offset-y = 0
-offset-x = 0
-
-border-top-size = 10
-border-bottom-size = 0
-border-right-size = 10
-border-left-size = 10
-
-;----------;
-; LOCATION ;
-;----------;
-
-bottom = false
-monitor = DVI-D-0
-wm-restack = none
-override-redirect = false
-
-;-------;
-; FONTS ;
-;-------;
-
-font-0 = Hack:size=10;3
-font-1 = "Font Awesome 5 Free:style=Solid:pixelsize=12;3"
-font-2 = "Font Awesome 5 Free:style=Regular:pixelsize=12;3"
-font-3 = "Font Awesome 5 Brands:pixelsize=12;3"
-
-;--------;
-; COLORS ;
-;--------;
-
-background = 0
-foreground = #f2576c
-border-color = 0
-
-;---------------;
-; MISCELLANEOUS ;
-;---------------;
-
+height = 31
+;offset-x = 200
+;offset-y = 50
+radius = 3.0
 fixed-center = true
-padding-left = 2
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 2
+line-color = #f00
+
+;border-size = 3
+;border-color = #00000000
+
+padding-left = 1
 padding-right = 2
-module-margin = 1.5
 
-modules-left = pulseaudio pulseaudio2
-modules-center = i3
-modules-right = network cpu date time
+module-margin-left = 1
+module-margin-right = 2
 
-tray-position = none
-tray-detached = true
+font-0 = Hack:size=10
+font-1 = "Font Awesome 5 Free:style=Regular:size=10;0"
+font-2 = "Font Awesome 5 Free:style=Solid:size=10;0"
+font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
+modules-left = i3
+modules-center = spotify
+modules-right = volume  date
 
-;---------;
-; MODULES ;
-;---------;
+wm-restack = i3
+
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+separator= 
 
 [module/i3]
 type = internal/i3
 
-pin-workspaces = true
-strip-wsnumbers = true
+pin-workspaces = false
+
+;strip-wsnumbers = true
+
+index-sort = true
+
+enable-click = true
+
 enable-scroll = false
 
-label-unfocused-foreground = #afafaf
-label-focused-foreground = #f2576c
-label-urgent-foreground = #ff0000
+wrapping-scroll = false
 
-[module/time]
-type = internal/date
+fuzzy-match = true
 
-interval = 1.0
+ws-icon-0 = 0;
+ws-icon-1 = 1; Term
+ws-icon-2 = 2; Code
+ws-icon-3 = 3; Web
+ws-icon-4 = 4; Slack
+ws-icon-5 = 5; Music
 
-date =  %H:%M
+format = <label-state> <label-mode>
+
+label-active-font = 2
+
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-background = #407055
+
+label-focused = %icon%
+label-focused-foreground = #F3E5DA
+label-focused-background = #3f3f3f
+label-focused-underline = #fba922
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-visible = %icon%
+label-visible-underline = #555555
+label-visible-padding = 2
+
+label-urgent = %icon%
+label-urgent-foreground = #B7A439
+label-urgent-background =  #232323
+label-urgent-padding = 2
+
+
+[module/title]
+type = internal/xwindow
+format-foreground = #B0704A
+format-padding = 4
+label-maxlen = 100
 
 [module/date]
 type = internal/date
-date =  %e %B - %A
-label = %date%
-
-[module/pulseaudio]
-type = internal/pulseaudio
-sink = alsa_output.usb-Audioengine_Audioengine_2_-00.analog-stereo
-format-volume = <ramp-volume> <label-volume>
-format-muted =  0%
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
-[module/pulseaudio2]
-type = internal/pulseaudio
-sink = alsa_output.usb-GN_Netcom_A_S_Jabra_EVOLVE_LINK_00031F8635C207-00.analog-stereo
-format-volume = <ramp-volume> <label-volume>
-format-muted =  0%
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
-
-[module/mpd]
-type = internal/mpd
-
-label-offline = mpd is offline
-format-online = <icon-prev> <toggle> <icon-next> <label-song>
-format-offline = <label-offline>
-host = 127.0.0.1
-port = 6600
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
-
-label-song-maxlen = 25
-label-song-ellipsis = true
-
-bar-progress-width = 10
-bar-progress-indicator = |
-bar-progress-fill = ─
-bar-progress-empty = ─
-
-[module/backlight]
-type = internal/backlight
-
-; Use the following command to list available cards:
-; $ ls -1 /sys/class/backlight/
-card = radeon_bl0
-
-format = <ramp> <label>
-
-label = %percentage%%
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-
-[module/wlan]
-type = internal/network
-
-interface = wlp2s0
-
 interval = 5
+date = " %Y-%m-%d"
+time = %H:%M
+format = 🕓 <label>
+format-underline = #655347
+label = %date% %time%
 
-label-connected =  %essid%
-label-disconnected =  Not Connected
+[module/spotify]
+type = custom/script
+exec = ~/dotfiles/i3/polybar/spotify.sh %artist% - %title%
+tail = true
+interval = 2
+format-prefix-foreground = #D5D0A7
+format-suffix-foreground = #D5D0A7
+format-prefix = " "
+format-suffix = " "
+format-overline = #2E2F35
 
-[module/cpu]
-type = internal/cpu
-label =  %percentage%%
 
-[module/memory]
-type = internal/memory
-label =  %gb_used%
+[module/volume]
+type = internal/volume
 
-[module/network]
-type = internal/network
-interface = enp0s25
-label-connected =  %downspeed% |  %upspeed%
+format-volume =  <bar-volume>
+label-volume = 
+label-volume-foreground = ${root.foreground}
+
+format-muted-prefix = " "
+format-muted-foreground = ${colors.foreground-alt}
+label-muted = sound muted
+
+format-volume-underline = #55aa55
+bar-volume-width = 10
+bar-volume-foreground-0 = #55aa55
+bar-volume-foreground-1 = #55aa55
+bar-volume-foreground-2 = #55aa55
+bar-volume-foreground-3 = #55aa55
+bar-volume-foreground-4 = #55aa55
+bar-volume-foreground-5 = #f5a70a
+bar-volume-foreground-6 = #ff5555
+bar-volume-gradient = false
+bar-volume-indicator = 
+bar-volume-indicator-font = 2
+bar-volume-fill = 
+bar-volume-fill-font = 3
+bar-volume-empty = 
+bar-volume-empty-font = 3
+bar-volume-empty-foreground = ${colors.foreground-alt}
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
