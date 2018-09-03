@@ -26,6 +26,12 @@ exec nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id numlockx on
 
+exec --no-startup-id gnome-terminal
+exec --no-startup-id subl
+exec --no-startup-id google-chrome
+exec --no-startup-id slack
+exec --no-startup-id spotify
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
