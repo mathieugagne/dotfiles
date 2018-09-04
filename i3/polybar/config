@@ -46,7 +46,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 font-4 = "Weather Icons:size=12;1"
 
 modules-left = i3
-modules-right = github gmail hotmail weather volume keyboard date
+modules-right = github gmail hotmail weather keyboard date
 
 wm-restack = i3
 
@@ -89,7 +89,7 @@ font-1 = "Font Awesome 5 Free:style=Regular:size=10;0"
 font-2 = "Font Awesome 5 Free:style=Solid:size=10;0"
 font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 
-modules-left = spotify
+modules-left = spotify volume
 modules-right = wireless-network cpu memory
 
 [module/i3]
@@ -175,11 +175,10 @@ format-volume =  <bar-volume>
 label-volume = 
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
-format-volume-underline = #55aa55
 bar-volume-width = 10
 bar-volume-foreground-0 = #55aa55
 bar-volume-foreground-1 = #55aa55
@@ -188,13 +187,12 @@ bar-volume-foreground-3 = #55aa55
 bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
+bar-volume-gradient = true
 bar-volume-indicator =
-bar-volume-indicator-font = 2
 bar-volume-fill = 
 bar-volume-fill-font = 3
-bar-volume-empty = 
-bar-volume-empty-font = 3
+bar-volume-empty = 
+bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
 [module/wireless-network]
