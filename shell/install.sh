@@ -15,3 +15,7 @@ ln -fs ~/dotfiles/shell/.zshrc ~/.zshrc
 # fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
+
+# gnome-terminal themes
+sudo apt install dconf-cli
+wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
