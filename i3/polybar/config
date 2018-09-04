@@ -46,15 +46,12 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 
 modules-left = i3
 modules-center = title
-modules-right = volume date
+modules-right = volume keyboard date
 
 wm-restack = i3
 
 scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
-
-separator= 
-
 
 [bar/bottom]
 ;monitor = DVI-D-0
@@ -135,17 +132,16 @@ label-focused-underline = #fba922
 label-focused-padding = 2
 
 label-unfocused = %icon%
-label-unfocused-padding = 2
+label-unfocused-padding = 1
 
 label-visible = %icon%
 label-visible-underline = #555555
-label-visible-padding = 2
+label-visible-padding = 1
 
 label-urgent = %icon%
 label-urgent-foreground = #B7A439
 label-urgent-background =  #232323
 label-urgent-padding = 2
-
 
 [module/title]
 type = internal/xwindow
@@ -208,7 +204,7 @@ interval = 1.0
 ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %{F#66}%essid%   %{F#66}%local_ip%    %downspeed%    %upspeed%
+label-connected = %{F#66}%essid%    %downspeed:7%
 label-disconnected =    not connected
 label-disconnected-foreground = #666
 
@@ -274,6 +270,35 @@ bar-used-fill-font = 6
 bar-used-empty = ─
 bar-used-empty-font = 6
 bar-used-empty-foreground = #444444
+
+[module/keyboard]
+type = internal/xkeyboard
+
+; List of indicators to ignore
+blacklist-0 = num lock
+blacklist-1 = scroll lock
+
+; Available tags:
+;   <label-layout> (default)
+;   <label-indicator> (default)
+format = <label-layout> <label-indicator>
+format-spacing = 0
+
+; Available tokens:
+;   %layout%
+;   %name%
+;   %number%
+; Default: %layout%
+label-layout = %layout%
+label-layout-background = ${colors.background}
+label-layout-foreground = ${colors.foreground}
+
+; Available tokens:
+;   %name%
+; Default: %name%
+label-indicator = %name%
+label-indicator-padding = 2
+label-indicator-background = #8139e8
 
 [settings]
 screenchange-reload = true
