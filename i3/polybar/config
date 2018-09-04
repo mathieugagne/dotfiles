@@ -46,7 +46,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 font-4 = "Weather Icons:size=12;1"
 
 modules-left = i3
-modules-right = gmail hotmail weather volume keyboard date
+modules-right = github gmail hotmail weather volume keyboard date
 
 wm-restack = i3
 
@@ -319,6 +319,14 @@ exec = ~/dotfiles/i3/polybar/gmail.sh
 interval = 60
 label = %{F#fba922} %output%
 click-left = google-chrome https://mail.google.com/mail/u/1/#inbox
+
+[module/github]
+type = internal/github
+token = ${env:GITHUB_ACCESS_TOKEN}
+empty-notifications = false
+label =  %notifications%
+interval = 10
+click-left = google-chrome https://github.com/notifications
 
 [settings]
 screenchange-reload = true
