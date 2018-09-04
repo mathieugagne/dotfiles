@@ -310,14 +310,14 @@ label-font = 5
 type = custom/script
 exec = ~/dotfiles/i3/polybar/hotmail.sh
 interval = 60
-format-prefix = " "
+label = %{F#fba922} %output%
 click-left = google-chrome https://outlook.live.com/owa/
 
 [module/gmail]
 type = custom/script
 exec = ~/dotfiles/i3/polybar/gmail.sh
 interval = 60
-format-prefix = " "
+label = %{F#fba922} %output%
 click-left = google-chrome https://mail.google.com/mail/u/1/#inbox
 
 [settings]
