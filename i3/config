@@ -6,13 +6,14 @@ font pango:Hack 9
 set $fg  #363837
 set $bg  #363837
 set $focused_bg #363837
+set $focused_fg #F3E5DA
 set $ind #407055
-# class                 border  backgr. text indicator child_border
-client.focused          $focused_bg  $focused_bg  $focused_bg  $ind  $focused_bg
-client.focused_inactive $bg     $bg     $fg  $bg       $bg
-client.unfocused        $bg     $bg     $fg  $bg       $bg
-client.urgent           $bg     $bg     $fg  $ind      $bg
-client.placeholder      $bg     $bg     $fg  $ind      $bg
+# class                 border       background   text         indicator
+client.focused          $focused_bg  $focused_bg  $focused_fg  $bg
+client.focused_inactive $focused_bg  $bg          $fg          $bg
+client.unfocused        $bg          $bg          $fg          $bg
+client.urgent           $bg          $bg          $fg          $ind
+client.placeholder      $bg          $bg          $fg          $ind
 client.background       $bg
 
 exec_always --no-startup-id ~/dotfiles/i3/polybar/launch.sh

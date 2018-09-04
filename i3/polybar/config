@@ -30,8 +30,8 @@ foreground = ${colors.foreground}
 line-size = 2
 line-color = #f00
 
-;border-size = 3
-;border-color = #00000000
+border-bottom-size = 3
+border-color = #232323
 
 padding-left = 1
 padding-right = 2
@@ -46,7 +46,6 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 font-4 = "Weather Icons:size=12;1"
 
 modules-left = i3
-modules-center = title
 modules-right = weather volume keyboard date
 
 wm-restack = i3
