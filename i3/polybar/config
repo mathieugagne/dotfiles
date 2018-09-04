@@ -93,7 +93,7 @@ font-2 = "Font Awesome 5 Free:style=Solid:size=10;0"
 font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 
 modules-left = spotify
-modules-right = cpu memory
+modules-right = wireless-network cpu memory
 
 [module/i3]
 type = internal/i3
@@ -156,17 +156,18 @@ label-maxlen = 100
 [module/date]
 type = internal/date
 interval = 5
-date = " %Y-%m-%d"
+date = "%Y-%m-%d"
 time = %H:%M
-format = 🕓 <label>
+format = <label>
 format-underline = #655347
-label = %date% %time%
+label =  %date% %time%
 
 [module/spotify]
 type = custom/script
 exec = ~/dotfiles/i3/polybar/spotify.sh %artist% - %title%
 tail = true
 interval = 2
+format-prefix = " "
 format-prefix-foreground = #D5D0A7
 format-suffix-foreground = #D5D0A7
 format-overline = #2E2F35
@@ -207,15 +208,16 @@ interval = 1.0
 ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %local_ip%    %downspeed%    %upspeed%
+label-connected = %{F#66}%essid%   %{F#66}%local_ip%    %downspeed%    %upspeed%
 label-disconnected =    not connected
-label-disconnected-foreground = #66
+label-disconnected-foreground = #666
 
-ramp-signal-0 = 1
-ramp-signal-1 = 2
-ramp-signal-2 = 3
-ramp-signal-3 = 4
-ramp-signal-4 = 5
+ramp-signal-0 = "▂"
+ramp-signal-1 = "▂▃"
+ramp-signal-2 = "▂▃▅"
+ramp-signal-3 = "▂▃▅▆"
+ramp-signal-4 = "▂▃▅▆█"
+ramp-signal-foreground = #666
 
 animation-packetloss-0 = 
 animation-packetloss-0-foreground = #ffa64c
