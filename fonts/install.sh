@@ -7,6 +7,7 @@ cp ~/dotfiles/fonts/hack/*.ttf ~/.local/share/fonts/
 cp ~/dotfiles/fonts/noto/*.ttf ~/.local/share/fonts/
 cp ~/dotfiles/fonts/unifont/*.ttf ~/.local/share/fonts/
 cp ~/dotfiles/fonts/material/*.ttf ~/.local/share/fonts/
+cp ~/dotfiles/fonts/weather/*.ttf ~/.local/share/fonts/
 
 # Build font information cache files
 fc-cache -fv
