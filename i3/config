@@ -17,8 +17,8 @@ client.background       $bg
 
 exec_always --no-startup-id ~/dotfiles/i3/polybar/launch.sh
 
-exec feh --bg-scale ~/dotfiles/pictures/desktop-background.jpg
-exec nitrogen --restore
+exec_always feh --bg-scale ~/dotfiles/pictures/desktop-background-2.jpg
+exec_always nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id numlockx on
 
