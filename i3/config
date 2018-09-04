@@ -3,7 +3,6 @@ set $mod Mod4
 #font pango:Ubuntu Mono 10
 font pango:Hack 9
 
-
 set $fg  #363837
 set $bg  #363837
 set $focused_bg #363837
@@ -66,6 +65,7 @@ bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
+bindsym $mod+m workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
