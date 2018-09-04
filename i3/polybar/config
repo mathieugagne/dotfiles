@@ -46,7 +46,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 font-4 = "Weather Icons:size=12;1"
 
 modules-left = i3
-modules-right = weather volume keyboard date
+modules-right = gmail hotmail weather volume keyboard date
 
 wm-restack = i3
 
@@ -305,6 +305,20 @@ type = custom/script
 exec = ~/dotfiles/i3/polybar/weather.sh
 interval = 300
 label-font = 5
+
+[module/hotmail]
+type = custom/script
+exec = ~/dotfiles/i3/polybar/hotmail.sh
+interval = 60
+format-prefix = " "
+click-left = google-chrome https://outlook.live.com/owa/
+
+[module/gmail]
+type = custom/script
+exec = ~/dotfiles/i3/polybar/gmail.sh
+interval = 60
+format-prefix = " "
+click-left = google-chrome https://mail.google.com/mail/u/1/#inbox
 
 [settings]
 screenchange-reload = true
