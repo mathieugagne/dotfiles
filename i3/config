@@ -124,7 +124,8 @@ mode "resize" {
 ######## keybindings #################################################
 
 # lock screen
-bindsym $mod+Ctrl+l exec i3lock -p win -i ~/.i3/locked.png -c 101010
+# bindsym $mod+Ctrl+l exec i3lock -p win -i ~/.i3/locked.png -c 101010
+bindsym $mod+Ctrl+l exec ~/dotfiles/i3/lock.sh
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
