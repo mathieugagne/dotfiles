@@ -11,6 +11,6 @@ random_background=${background_images[rand]}
 
 scrot /tmp/locking_screen.png
 convert -blur 0x8 /tmp/locking_screen.png /tmp/screen_blur.png
-convert -composite /tmp/screen_blur.png $random_background -gravity South -geometry -20x1200 /tmp/screen.png
+convert -composite /tmp/screen_blur.png $random_background -gravity SouthEast -geometry -20x1200 /tmp/screen.png
 i3lock -i /tmp/screen.png
 revert
