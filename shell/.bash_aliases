@@ -47,7 +47,7 @@ alias ee="subl -a ."
 alias gbclean="git checkout master && git branch --merged | grep -v master | xargs git branch -d"
 alias gbpurge="git branch | grep -v "master" | xargs git branch -D"
 alias gcmgs="gcmsg"
-alias gg="git grep"
+alias gg="git grep --heading --break --line-number"
 alias ggpush!="ggpush --force"
 alias grbom="gfa && grb origin/master"
 
