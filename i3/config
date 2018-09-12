@@ -28,7 +28,7 @@ exec --no-startup-id subl
 exec --no-startup-id google-chrome
 exec --no-startup-id slack
 exec --no-startup-id spotify
-assign [class="Sublime Text"] 2
+assign [class="Sublime_text"] 2
 assign [class="Google-chrome"] 3
 assign [class="Slack"] 4
 assign [class="Spotify"] 5
