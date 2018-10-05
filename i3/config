@@ -28,6 +28,8 @@ exec --no-startup-id subl
 exec --no-startup-id google-chrome
 exec --no-startup-id slack
 exec --no-startup-id spotify
+
+# Use `xwininfo` to find a window class
 assign [class="Sublime_text"] 2
 assign [class="Google-chrome"] 3
 assign [class="Slack"] 4
@@ -66,7 +68,6 @@ bindsym $mod+2 workspace 2
 bindsym $mod+3 workspace 3
 bindsym $mod+4 workspace 4
 bindsym $mod+5 workspace 5
-bindsym $mod+m workspace 5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
