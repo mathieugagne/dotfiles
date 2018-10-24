@@ -46,7 +46,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 font-4 = "Weather Icons:size=12;1"
 
 modules-left = i3
-modules-right = github unisafety-email potloc-email hotmail weather keyboard date
+modules-right = unisafety-email potloc-email hotmail weather keyboard date
 
 wm-restack = i3
 
