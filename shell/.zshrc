@@ -6,26 +6,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.bash_aliases
+source $HOME/.profile
 
-export EDITOR=vim
-
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
-# FZF
+# fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# pip
-export PATH="$HOME/.local/bin:$PATH"
-
-# rust
-export PATH="$HOME/.cargo/bin:$PATH"
-
-# Set cap locks as escape for easy vim
-setxkbmap -option caps:swapescape
 
 # docker-compose autocompletion
 fpath=(~/.zsh/completion $fpath)
-export PATH="$HOME/.rbenv/bin:$PATH"
-
