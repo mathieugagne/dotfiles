@@ -12,6 +12,5 @@ git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-b
 ln -fs ~/dotfiles/dev/.gemrc ~/.gemrc
 ln -fs ~/dotfiles/dev/.pryrc ~/.pryrc
 
-# nodejs
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt install -y nodejs
+# nvm
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
