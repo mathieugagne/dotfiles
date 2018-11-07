@@ -270,33 +270,13 @@ bar-used-empty-font = 6
 bar-used-empty-foreground = #444444
 
 [module/keyboard]
-type = internal/xkeyboard
-
-; List of indicators to ignore
-blacklist-0 = num lock
-blacklist-1 = scroll lock
-
-; Available tags:
-;   <label-layout> (default)
-;   <label-indicator> (default)
-format = <label-layout> <label-indicator>
-format-spacing = 0
-
-; Available tokens:
-;   %layout%
-;   %name%
-;   %number%
-; Default: %layout%
-label-layout = %layout%
+type = custom/script
+exec = ~/dotfiles/i3/polybar/bin/keyboard_layout.sh
+interval = 2
+label = %output%
 label-layout-background = ${colors.background}
 label-layout-foreground = ${colors.foreground}
-
-; Available tokens:
-;   %name%
-; Default: %name%
-label-indicator = %name%
-label-indicator-padding = 2
-label-indicator-background = #8139e8
+click-left = ~/dotfiles/i3/polybar/bin/keyboard_layout_toggle.sh
 
 [module/weather]
 type = custom/script
