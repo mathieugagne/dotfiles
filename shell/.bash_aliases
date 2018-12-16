@@ -50,6 +50,8 @@ alias gcmgs="gcmsg"
 alias gg="git grep --heading --break --line-number"
 alias ggpush!="ggpush --force"
 alias grbom="gfa && grb origin/master"
+# Overrides zsh original. This one only removes untracked files, without touching .gitignore rules.
+alias gclean="git status --porcelain | grep '??' | sed 's/^...//' | xargs /bin/rm"
 
 # Fixes
 alias fix_corrupt_history=". ~/dotfiles/fix_corrupt_history.sh"
