@@ -50,7 +50,7 @@ alias gcmgs="gcmsg"
 alias gg="git grep --heading --break --line-number"
 alias ggpush!="ggpush --force"
 alias grbom="gfa && grb origin/master"
-alias gft="git fetch --tags"
+alias gft="git fetch --tags --prune"
 # Overrides zsh original. This one only removes untracked files, without touching .gitignore rules.
 alias gclean="git status --porcelain | grep '??' | sed 's/^...//' | xargs /bin/rm -rf"
 
