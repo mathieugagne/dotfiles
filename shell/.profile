@@ -22,7 +22,9 @@ PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 # vim
 export EDITOR=vim
 # Set cap locks as escape for easy vim
-setxkbmap -option caps:swapescape
+if hash setxkbmap 2>/dev/null; then
+    setxkbmap -option caps:swapescape
+fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
