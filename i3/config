@@ -175,4 +175,4 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Take a screenshot upon pressing $mod+x (select an area)
-bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
+bindsym --release $mod+x exec --no-startup-id ~/dotfiles/scripts/take_screenshot.sh
