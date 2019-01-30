@@ -1,3 +1,4 @@
 #!/bin/sh
 
-echo $(setxkbmap -query | grep layout | awk '{print $2}')
+layout=$(setxkbmap -query | grep layout | awk '{print $2}')
+echo  $layout
