@@ -46,7 +46,7 @@ font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 font-4 = "Weather Icons:size=12;1"
 
 modules-left = i3
-modules-right = unisafety-email potloc-email hotmail weather keyboard date
+modules-right = unisafety-email potloc-email hotmail weather audioswitch keyboard date
 
 wm-restack = i3
 
@@ -277,6 +277,16 @@ label = %output%
 label-layout-background = ${colors.background}
 label-layout-foreground = ${colors.foreground}
 click-left = ~/dotfiles/i3/polybar/bin/keyboard_layout_toggle.sh
+
+[module/audioswitch]
+type = custom/script
+exec = ~/dotfiles/i3/polybar/bin/audio-switch.rb --current
+interval = 2
+label = %output%
+label-layout-background = ${colors.background}
+label-layout-foreground = ${colors.foreground}
+label-font = 2
+click-left = ~/dotfiles/i3/polybar/bin/audio-switch.rb --toggle
 
 [module/weather]
 type = custom/script
