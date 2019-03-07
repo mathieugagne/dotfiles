@@ -306,7 +306,7 @@ type = custom/script
 exec = ~/dotfiles/i3/polybar/bin/potloc-email.sh
 interval = 60
 label = %{F#fba922} %output%
-click-left = google-chrome https://mail.google.com/mail/u/1/#inbox
+click-left = google-chrome https://mail.google.com/mail/u/0/?tab=cm#inbox
 
 [module/unisafety-email]
 type = custom/script
