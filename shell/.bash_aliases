@@ -24,6 +24,11 @@ alias rp='bin/rspec'
 alias rsp='EXCLUDE_FEATURE_TESTS=true bin/rspec'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
+alias bw="bin/webpack-dev-server"
+alias bs="bin/sidekiq"
+
+# Docker
+alias dc='docker-compose'
 
 # js
 pw() {
