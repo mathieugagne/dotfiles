@@ -57,5 +57,6 @@ alias ggpush!="ggpush --force"
 alias grbom="gfa && grb origin/master"
 alias grbiom="gfa && grbi origin/master"
 alias gft="git fetch --tags --prune"
+alias gback="git reset --soft HEAD~1 ; git reset"
 # Overrides zsh original. This one only removes untracked files, without touching .gitignore rules.
 alias gclean="git status --porcelain | grep '??' | sed 's/^...//' | xargs /bin/rm -rf"
