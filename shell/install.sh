@@ -20,3 +20,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # gnome-terminal themes
 sudo apt install dconf-cli
 wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
+
+# colorls
+gem install colorls
+rbenv rehash
