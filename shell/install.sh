@@ -21,6 +21,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 sudo apt install dconf-cli
 wget -O gogh https://git.io/vQgMr && chmod +x gogh && ./gogh && rm gogh
 
-# colorls
+# https://github.com/athityakumar/colorls
 gem install colorls
 rbenv rehash

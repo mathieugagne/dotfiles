@@ -1,8 +1,7 @@
 alias cdw="cd ~/workspace/"
 alias cdp="cd ~/personal/"
 
-alias ll="ls -lAh"
-alias lc="colorls -lA --sd"
+alias ll="colorls -lAh --sd"
 
 # Utilities
 alias xclip="xclip -selection c"
