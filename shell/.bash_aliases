@@ -22,6 +22,7 @@ alias rs='bin/rails s'
 alias rc='SKIP_YARN_INTEGRITY_CHECK=true bin/rails c'
 alias rp='bin/rspec'
 alias rsp='EXCLUDE_FEATURE_TESTS=true bin/rspec'
+alias rpof='bin/rspec --only-failures'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
 alias bw="bin/webpack-dev-server"
