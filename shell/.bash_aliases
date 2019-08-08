@@ -31,6 +31,11 @@ alias bs="bin/sidekiq"
 # Docker
 alias dc='docker-compose'
 
+# Terraform
+alias tf='terraform'
+alias tfp='terraform plan'
+alias tfa='terraform apply -auto-approve'
+
 # js
 pw() {
   ./node_modules/.bin/stylelint --fix "$1/**/*.scss";
