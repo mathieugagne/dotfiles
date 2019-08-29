@@ -1,0 +1,8 @@
+[user]
+  email = gagne.mathieu@hotmail.com
+  name = Mathieu Gagné
+
+[alias]
+  pr = !hub pull-request --assign mathieugagne --push --draft
+[pager]
+  branch = false
