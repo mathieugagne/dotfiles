@@ -14,3 +14,15 @@ ln -fs ~/dotfiles/dev/.pryrc ~/.pryrc
 
 # nvm
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+
+# pip
+# http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install-linux.html
+curl -O https://bootstrap.pypa.io/get-pip.py
+python3 get-pip.py --user
+echo 'export PATH="~/.local/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+rm get-pip.py
+
+# AWS & Beanstalk
+pip install awsebcli --upgrade --user
+pip install awscli --upgrade --user
