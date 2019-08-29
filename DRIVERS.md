@@ -1,5 +1,19 @@
 # Workstation Install
 
+## nvidia drivers 18.04
+
+I've kept the modifications from the other instructions below after upgrading.
+
+https://www.mvps.net/docs/install-nvidia-drivers-ubuntu-18-04-lts-bionic-beaver-linux/
+
+```
+sudo apt-get purge nvidia*
+sudo add-apt-repository ppa:graphics-drivers
+sudo apt update
+sudo apt install nvidia-driver-390
+sudo reboot
+```
+
 ## nvidia drivers
 
 https://askubuntu.com/questions/841876/how-to-disable-nouveau-kernel-driver
