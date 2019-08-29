@@ -13,9 +13,11 @@ libnl-3-dev \
 wireless-tools \
 libasound2-dev \
 libcurl4-openssl-dev \
-libmpdclient-dev
+libmpdclient-dev \
+libxcb-composite0-dev
 
-git clone --branch 3.2 --recursive https://github.com/jaagr/polybar ~/.local/lib/polybar
+sudo rm -rf ~/.local/lib/polybar
+git clone --branch 3.4 --recursive https://github.com/jaagr/polybar ~/.local/lib/polybar
 cd ~/.local/lib/polybar/
 rm -rf build
 mkdir -p build
