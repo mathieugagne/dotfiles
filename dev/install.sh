@@ -26,3 +26,6 @@ rm get-pip.py
 # AWS & Beanstalk
 pip install awsebcli --upgrade --user
 pip install awscli --upgrade --user
+
+# Potloc
+ln -fs ~/dotfiles/dev/pgcmsg ~/.local/bin/pgcmsg

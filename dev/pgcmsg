@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+def commit_message
+  ARGV[0]
+end
+
+def potloc_ticket
+  current_branch = `git rev-parse --abbrev-ref HEAD`
+  potloc_ticket = current_branch.match(/^POT-\d*/).to_s
+  potloc_ticket ||= current_branch.match(/^FIX.*/).to_s
+  potloc_ticket ||= current_branch.match(/^WIP.*/).to_s
+  potloc_ticket
+end
+
+def potloc_commit_message
+  [potloc_ticket, commit_message].compact.join(" ")
+end
+
+system("git commit -m \"#{potloc_commit_message}\"")
