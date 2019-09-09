@@ -14,14 +14,11 @@ alias ap='ansible-playbook'
 alias ave='ansible-vault encrypt'
 alias avd='ansible-vault decrypt'
 
-# Rspec to keep color option
-alias spec='spec --color --format specdoc'
-
 # Rails server
 alias rs='bin/rails s'
 alias rc='SKIP_YARN_INTEGRITY_CHECK=true bin/rails c'
 alias rp='bin/rspec'
-alias rsp='EXCLUDE_FEATURE_TESTS=true bin/rspec'
+alias rsp='EXCLUDE_FEATURE_TESTS=true EXCLUDE_INTEGRATION_TESTS=true bin/rspec'
 alias rpof='bin/rspec --only-failures'
 alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
