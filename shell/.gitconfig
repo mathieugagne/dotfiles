@@ -3,6 +3,6 @@
   name = Mathieu Gagné
 
 [alias]
-  pr = !hub pull-request --assign mathieugagne --push --draft
+  pr = !hub pull-request --base develop --assign mathieugagne --push --draft
 [pager]
   branch = false
