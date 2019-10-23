@@ -33,6 +33,9 @@ eval "$(rbenv init -)"
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
 
+# golang
+export PATH="$HOME/go/bin:$PATH"
+
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
