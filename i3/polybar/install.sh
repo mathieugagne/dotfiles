@@ -12,6 +12,7 @@ libiw-dev \
 libnl-3-dev \
 wireless-tools \
 libasound2-dev \
+libcurl4 \
 libcurl4-openssl-dev \
 libmpdclient-dev \
 libxcb-composite0-dev

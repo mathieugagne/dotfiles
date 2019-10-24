@@ -17,7 +17,8 @@ secondary = #e60053
 alert = #bd2c40
 
 [bar/top]
-;monitor = DVI-D-0
+;Identify monitor name using `xrandr`
+monitor = HDMI-1
 width = 100%
 height = 31
 offset-x = 200
@@ -54,7 +55,7 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 [bar/bottom]
-;monitor = DVI-D-0
+monitor = HDMI-1
 bottom = true
 width = 100%
 height = 31
