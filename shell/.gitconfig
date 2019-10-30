@@ -4,5 +4,6 @@
 
 [alias]
   pr = !hub pull-request --base develop --assign mathieugagne --push --draft
+  start = !pgcb $1
 [pager]
   branch = false

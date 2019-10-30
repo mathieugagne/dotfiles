@@ -13,9 +13,3 @@ source $HOME/.profile
 
 # docker-compose autocompletion
 fpath=(~/.zsh/completion $fpath)
-
-# ruby
-export PATH="$HOME/.rbenv/bin:$PATH"
-
-# pip
-export PATH="~/.local/bin:$PATH"
