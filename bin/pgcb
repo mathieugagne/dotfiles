@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "active_support/inflector"
+
 def jira_issue_number
   ARGV[0]
 end
@@ -10,7 +12,7 @@ def jira_summary
 end
 
 def branch_name
-  "POT-#{jira_issue_number}-#{jira_summary.downcase.gsub("\s", "-")}"
+  "POT-#{jira_issue_number}-#{jira_summary.parameterize}"
 end
 
 system("git checkout -b #{branch_name}")
