@@ -53,7 +53,7 @@ alias ee="subl -a ."
 
 # git
 alias gbclean="git checkout master && git branch --merged | grep -v master | xargs git branch -d"
-alias gbpurge="git branch | grep -v -E \"master|develop|release\" | xargs git branch -D"
+alias gbpurge="git branch | grep -v -E \"master|develop\" | xargs git branch -D"
 alias gcmgs="gcmsg"
 alias gcmsg!="OVERCOMMIT_DISABLED=1 gcmsg"
 alias gg="git grep --heading --break --line-number"
