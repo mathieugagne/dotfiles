@@ -2,8 +2,8 @@
 
 sudo apt install -y libssl-dev libreadline-dev zlib1g-dev libpq-dev libsqlite3-dev
 
-ln -fs ~/dotfiles/dev/.gemrc ~/.gemrc
-ln -fs ~/dotfiles/dev/.pryrc ~/.pryrc
+ln -fs ~/dotfiles/dev/ruby/.gemrc ~/.gemrc
+ln -fs ~/dotfiles/dev/ruby/.pryrc ~/.pryrc
 
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 mkdir -p "$(rbenv root)"/plugins
