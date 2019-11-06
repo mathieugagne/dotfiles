@@ -2,4 +2,4 @@
 
 # Reset local branch to its remote counterpart
 
-git reset --hard origin/$(git branch | grep \* | cut -d ' ' -f2)
+git reset --hard origin/$(git rev-parse --abbrev-ref HEAD)

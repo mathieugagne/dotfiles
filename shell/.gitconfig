@@ -5,5 +5,6 @@
 [alias]
   pr = !hub pull-request --base develop --assign mathieugagne --push --draft
   start = !pgcb $1
+  current-branch = !git rev-parse --abbrev-ref HEAD
 [pager]
   branch = false
