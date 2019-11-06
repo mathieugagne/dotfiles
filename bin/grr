@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Reset local branch to its remote counterpart
+
+git reset --hard origin/$(git branch | grep \* | cut -d ' ' -f2)
