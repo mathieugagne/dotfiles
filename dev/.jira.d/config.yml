@@ -33,3 +33,8 @@ custom-commands:
         required: true
     script: |-
       jira view POT-{{args.ISSUE_NUMBER}} -t debug | jq -r ".fields.summary"
+
+  - name: standup
+    help: Every story changes of yesterday
+    script: |-
+      {{jira}} list --template table --query "project = POT AND assignee=currentuser() AND status in (done, 'in progress', 'in review') AND statusCategoryChangedDate >= -1d ORDER BY key ASC, summary DESC, cf[10005] DESC, lastViewed DESC"
