@@ -1,4 +1,9 @@
 set $mod Mod4
+set $right_monitor "DVI-D-0"
+set $left_monitor "HDMI-0"
+
+exec --no-startup-id xrandr --output $right_monitor --primary
+exec --no-startup-id xrandr --output $left_monitor --auto --left-of $right_monitor
 
 #font pango:Ubuntu Mono 10
 font pango:Hack 9
@@ -23,17 +28,23 @@ exec_always nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id numlockx on
 
-exec --no-startup-id gnome-terminal
-exec --no-startup-id subl
-exec --no-startup-id google-chrome
-exec --no-startup-id slack
-exec --no-startup-id spotify
+workspace 1 output $left_monitor
+workspace 2 output $right_monitor
+workspace 3 output $right_monitor
+workspace 4 output $left_monitor
+workspace 5 output $right_monitor
 
-# Use `xwininfo` to find a window class
-assign [class="Sublime_text"] 2
+# Use `xprop` to find a window class
+# assign [class="Gnome-terminal"] 1 // Avoid assigning the terminal or else you can't open a terminal in whichever workspace you want
+assign [class="Code"] 2
 assign [class="Google-chrome"] 3
 assign [class="Slack"] 4
-assign [class="Spotify"] 5
+assign [class="spotify"] 5
+
+exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal; workspace 1'
+exec --no-startup-id i3-msg 'workspace 2; exec code; workspace 1'
+exec --no-startup-id i3-msg 'workspace 3; exec google-chrome; workspace 1'
+exec --no-startup-id i3-msg 'workspace 4; exec slack; workspace 1'
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
