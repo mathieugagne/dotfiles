@@ -3,7 +3,7 @@
   name = Mathieu Gagné
 
 [alias]
-  pr = !hub pull-request --base develop --assign mathieugagne --push --draft
+  pr = !pgpr
   start = !pgcb $1
   current-branch = !git rev-parse --abbrev-ref HEAD
 [pager]
