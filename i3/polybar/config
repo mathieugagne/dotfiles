@@ -90,7 +90,7 @@ font-2 = "Font Awesome 5 Free:style=Solid:size=10;0"
 font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
 
 modules-left = spotify volume
-modules-right = wireless-network public-ip-address cpu memory
+modules-right = wireless-network nordvpn public-ip-address cpu memory
 
 [module/i3]
 type = internal/i3
@@ -218,6 +218,12 @@ animation-packetloss-0-foreground = #ffa64c
 animation-packetloss-1 = 
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate = 500
+
+[module/nordvpn]
+type = custom/script
+exec = ~/dotfiles/i3/polybar/bin/nordvpn.sh
+interval = 5
+label-font = 5
 
 [module/public-ip-address]
 type = custom/script
