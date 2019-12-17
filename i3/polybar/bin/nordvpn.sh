@@ -1,5 +1,9 @@
 #!/bin/sh
 
+set -e
+
+command -v nordvpn;
+
 nordvpn_status=$(nordvpn status | grep Status | awk '{ print $2 }')
 
 if [ $nordvpn_status = "Connected" ]; then
