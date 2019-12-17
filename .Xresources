@@ -57,33 +57,38 @@ rofi.color-urgent: #272822, #f4bf75, #272822, #272822, #f4bf75
 ! URxvt configs
 ! ------------------------------------------------------------------------------
 
-URxvt.geometry:           72x18
-URxvt*letterSpace:        0
-URxvt.lineSpace:          0
-URxvt*internalBorder:     24
-URxvt*externalBorder:     0
-URxvt*depth:              32
-URxvt*saveline:           2000
-URxvt*termName:           rxvt-256color
-URxvt*iso14755:           false
-URxvt*scrollBar:          false
-URxvt*scrollBar_right:    false
-URxvt.perl-ext-common:    default,clipboard,url-select,keyboard-select
-URxvt.copyCommand:        xclip -i -selection clipboard
-URxvt.pasteCommand:       xclip -o -selection clipboard
-URxvt.keysym.M-c:         perl:clipboard:copy
-URxvt.keysym.M-v:         perl:clipboard:paste
-URxvt.keysym.M-C-v:       perl:clipboard:paste_escaped
-URxvt.keysym.M-Escape:    perl:keyboard-select:activate
-URxvt.keysym.Shift-Up:    command:\033]720;1\007
-URxvt.keysym.Shift-Down:  command:\033]721;1\007
-URxvt.keysym.M-s:         perl:keyboard-select:search
-URxvt.keysym.M-u:         perl:url-select:select_next
-URxvt.urlLauncher:        xdg-open
-URxvt.underlineURLs:      true
-URxvt.urlButton:          1
-URxvt*buffered:           false
-URxvt.urgentOnBell:       True
+URxvt.geometry:               72x18
+URxvt*letterSpace:            0
+URxvt.lineSpace:              0
+URxvt*internalBorder:         24
+URxvt*externalBorder:         0
+URxvt*depth:                  32
+URxvt*saveline:               2000
+URxvt*termName:               rxvt-256color
+URxvt*iso14755:               false
+URxvt*scrollBar:              false
+URxvt*scrollBar_right:        false
+URxvt.perl-ext-common:        default,matcher,clipboard
+URxvt.url-launcher:           /usr/bin/xdg-open
+URxvt.matcher.button:         1
+URxvt.colorUL:                #66d9ef
+
+! https://unix.stackexchange.com/questions/444773/how-to-disable-the-ctrlshift-binding-iso-14755-in-urxvt/444777#444777
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+! https://unix.stackexchange.com/questions/294337/rebinding-ctrl-alt-cv-to-ctrl-shift-cv-in-urxvt-9-20/329556#329556
+URxvt.keysym.Control-Meta-c:  builtin-string:
+URxvt.keysym.Control-Meta-v:  builtin-string:
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+URxvt.keysym.Shift-Up:        command:\033]720;1\007
+URxvt.keysym.Shift-Down:      command:\033]721;1\007
+URxvt.urlLauncher:            xdg-open
+URxvt.underlineURLs:          true
+URxvt.urlButton:              1
+URxvt*buffered:               false
+URxvt.urgentOnBell:           True
 
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration
