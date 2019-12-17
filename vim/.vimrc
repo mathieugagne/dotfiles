@@ -55,10 +55,10 @@ syntax on
 " set colorcolumn=81
 
 " set color scheme to solarized
-let g:solarized_termcolors=256
-set t_Co=256
-set background=dark
-colorscheme solarized
+" let g:solarized_termcolors=256
+" set t_Co=256
+" set background=dark
+" colorscheme solarized
 
 " Add fzf if installed using git
 set rtp+=~/.fzf
