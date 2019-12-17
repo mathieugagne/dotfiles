@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+# urxvt
+shell/urxvt/install.sh
+
 ln -fs ~/dotfiles/shell/.bashrc ~/.bashrc
 ln -fs ~/dotfiles/shell/.bash_aliases ~/.bash_aliases
 ln -fs ~/dotfiles/shell/.profile ~/.profile

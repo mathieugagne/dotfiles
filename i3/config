@@ -41,7 +41,7 @@ assign [class="Google-chrome"] 3
 assign [class="Slack"] 4
 assign [class="spotify"] 5
 
-exec --no-startup-id i3-msg 'workspace 1; exec gnome-terminal; workspace 1'
+exec --no-startup-id i3-msg 'workspace 1; exec urxvt; workspace 1'
 exec --no-startup-id i3-msg 'workspace 2; exec code; workspace 1'
 exec --no-startup-id i3-msg 'workspace 3; exec google-chrome; workspace 1'
 exec --no-startup-id i3-msg 'workspace 4; exec slack; workspace 1'
@@ -140,7 +140,8 @@ mode "resize" {
 bindsym $mod+Ctrl+l exec ~/dotfiles/i3/lock.sh
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 # bindsym $mod+Shift+q kill
