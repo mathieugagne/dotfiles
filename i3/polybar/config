@@ -8,13 +8,24 @@
 ;=====================================================
 
 [colors]
-background = #232323
-background-alt = #444
-foreground = #F3E5DA
-foreground-alt = #555
-primary = #F3E5DA
-secondary = #e60053
-alert = #bd2c40
+black = #272822
+black-alt = #75715e
+red = #f92672
+green = #a6e22e
+yellow = #f4bf75
+blue = #66d9ef
+magenta = #ae81ff
+cyan = #a1efe4
+white = #f8f8f2
+white-alt = #f9f8f5
+
+background = ${colors.black}
+background-alt = ${colors.black-alt}
+foreground = ${colors.white}
+foreground-alt = ${colors.white-alt}
+primary = ${colors.blue}
+secondary = ${colors.magenta}
+alert = ${colors.red}
 
 [bar/top]
 monitor = ${env:MAIN_MONITOR:HDMI-1}
@@ -22,7 +33,7 @@ width = 100%
 height = 31
 offset-x = 200
 offset-y = 50
-radius = 3.0
+radius = 0
 fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -31,7 +42,7 @@ line-size = 2
 line-color = #f00
 
 border-bottom-size = 3
-border-color = #232323
+border-color = ${colors.background}
 
 padding-left = 1
 padding-right = 2
@@ -130,21 +141,21 @@ label-mode-padding = 2
 label-mode-background = #407055
 
 label-focused = %icon%
-label-focused-foreground = #F3E5DA
-label-focused-background = #3f3f3f
-label-focused-underline = #fba922
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background}
+label-focused-underline = ${colors.primary}
 label-focused-padding = 2
 
 label-unfocused = %icon%
 label-unfocused-padding = 1
 
 label-visible = %icon%
-label-visible-underline = #555555
+label-visible-underline = ${colors.background-alt}
 label-visible-padding = 1
 
 label-urgent = %icon%
-label-urgent-foreground = #B7A439
-label-urgent-background =  #232323
+label-urgent-foreground = ${colors.foreground-alt}
+label-urgent-background =  ${colors.background-alt}
 label-urgent-padding = 2
 
 [module/title]
@@ -168,8 +179,8 @@ exec = ~/dotfiles/i3/polybar/bin/spotify.sh %artist% - %title%
 tail = true
 interval = 2
 format-prefix = " "
-format-prefix-foreground = #D5D0A7
-format-suffix-foreground = #D5D0A7
+format-prefix-foreground = ${colors.yellow}
+format-suffix-foreground = ${colors.yellow}
 format-overline = #2E2F35
 
 [module/volume]
@@ -184,13 +195,13 @@ format-muted-foreground = ${colors.foreground-alt}
 label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
+bar-volume-foreground-0 = ${colors.green}
+bar-volume-foreground-1 = ${colors.green}
+bar-volume-foreground-2 = ${colors.green}
+bar-volume-foreground-3 = ${colors.green}
+bar-volume-foreground-4 = ${colors.green}
+bar-volume-foreground-5 = ${colors.yellow}
+bar-volume-foreground-6 = ${colors.red}
 bar-volume-gradient = true
 bar-volume-indicator =
 bar-volume-fill = 
@@ -208,17 +219,17 @@ ping-interval = 10
 format-connected = <ramp-signal> <label-connected>
 label-connected = %{F#66}%essid%    %downspeed:7%
 label-disconnected =    not connected
-label-disconnected-foreground = #666
+label-disconnected-foreground = ${colors.foreground-alt}
 
 ramp-signal-0 = "▂"
 ramp-signal-1 = "▂▃"
 ramp-signal-2 = "▂▃▅"
 ramp-signal-3 = "▂▃▅▆"
 ramp-signal-4 = "▂▃▅▆█"
-ramp-signal-foreground = #666
+ramp-signal-foreground = ${colors.foreground-alt}
 
 animation-packetloss-0 = 
-animation-packetloss-0-foreground = #ffa64c
+animation-packetloss-0-foreground = ${colors.yellow}
 animation-packetloss-1 = 
 animation-packetloss-1-foreground = ${bar/top.foreground}
 animation-packetloss-framerate = 500
@@ -243,28 +254,28 @@ label = CPU
 
 ramp-coreload-0 = ▁
 ramp-coreload-0-font = 2
-ramp-coreload-0-foreground = #aaff77
+ramp-coreload-0-foreground = ${colors.green}
 ramp-coreload-1 = ▂
 ramp-coreload-1-font = 2
-ramp-coreload-1-foreground = #aaff77
+ramp-coreload-1-foreground = ${colors.green}
 ramp-coreload-2 = ▃
 ramp-coreload-2-font = 2
-ramp-coreload-2-foreground = #aaff77
+ramp-coreload-2-foreground = ${colors.green}
 ramp-coreload-3 = ▄
 ramp-coreload-3-font = 2
-ramp-coreload-3-foreground = #aaff77
+ramp-coreload-3-foreground = ${colors.green}
 ramp-coreload-4 = ▅
 ramp-coreload-4-font = 2
-ramp-coreload-4-foreground = #fba922
+ramp-coreload-4-foreground = ${colors.yellow}
 ramp-coreload-5 = ▆
 ramp-coreload-5-font = 2
-ramp-coreload-5-foreground = #fba922
+ramp-coreload-5-foreground = ${colors.yellow}
 ramp-coreload-6 = ▇
 ramp-coreload-6-font = 2
-ramp-coreload-6-foreground = #ff5555
+ramp-coreload-6-foreground = ${colors.red}
 ramp-coreload-7 = █
 ramp-coreload-7-font = 2
-ramp-coreload-7-foreground = #ff5555
+ramp-coreload-7-foreground = ${colors.red}
 
 [module/memory]
 type = internal/memory
@@ -272,18 +283,18 @@ format = <label> <bar-used>
 label = RAM
 
 bar-used-width = 30
-bar-used-foreground-0 = #aaff77
-bar-used-foreground-1 = #aaff77
-bar-used-foreground-2 = #fba922
-bar-used-foreground-3 = #ff5555
+bar-used-foreground-0 = ${colors.green}
+bar-used-foreground-1 = ${colors.green}
+bar-used-foreground-2 = ${colors.yellow}
+bar-used-foreground-3 = ${colors.red}
 bar-used-indicator = |
 bar-used-indicator-font = 6
-bar-used-indicator-foreground = #ff
+bar-used-indicator-foreground = ${colors.white}
 bar-used-fill = ─
 bar-used-fill-font = 6
 bar-used-empty = ─
 bar-used-empty-font = 6
-bar-used-empty-foreground = #444444
+bar-used-empty-foreground = ${colors.foreground}
 
 [module/keyboard]
 type = custom/script
@@ -314,28 +325,28 @@ label-font = 5
 type = custom/script
 exec = ~/dotfiles/i3/polybar/bin/hotmail.sh
 interval = 60
-label = %{F#fba922} %output%
+label = %{F#66d9ef} %output%
 click-left = google-chrome https://outlook.live.com/owa/
 
 [module/potloc-email]
 type = custom/script
 exec = ~/dotfiles/i3/polybar/bin/potloc-email.sh
 interval = 60
-label = %{F#fba922} %output%
+label = %{F#66d9ef} %output%
 click-left = google-chrome https://mail.google.com/mail/u/0/?tab=cm#inbox
 
 [module/unisafety-email]
 type = custom/script
 exec = ~/dotfiles/i3/polybar/bin/unisafety-email.sh
 interval = 60
-label = %{F#fba922} %output%
+label = %{F#66d9ef} %output%
 click-left = google-chrome https://outlook.live.com/owa/
 
 [module/github]
 type = internal/github
 token = ${env:GITHUB_ACCESS_TOKEN}
 empty-notifications = false
-label = %{A1:google-chrome https\://github.com/notifications:}%{F#fba922} %notifications%%{A}
+label = %{A1:google-chrome https\://github.com/notifications:}%{F#66d9ef} %notifications%%{A}
 interval = 10
 
 [settings]

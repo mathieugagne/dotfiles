@@ -5,17 +5,16 @@ set $left_monitor "HDMI-0"
 exec --no-startup-id xrandr --output $right_monitor --primary
 exec --no-startup-id xrandr --output $left_monitor --auto --left-of $right_monitor
 
-#font pango:Ubuntu Mono 10
-font pango:Hack 9
+font pango:monospace 10
 
-set $fg  #363837
-set $bg  #363837
-set $focused_bg #363837
-set $focused_fg #F3E5DA
-set $ind #407055
+set $fg  #f8f8f2
+set $bg  #272822
+set $focused_fg #f9f8f5
+set $focused_bg #272822
+set $ind #66d9ef
 # class                 border       background   text         indicator
 client.focused          $focused_bg  $focused_bg  $focused_fg  $bg
-client.focused_inactive $focused_bg  $bg          $fg          $bg
+client.focused_inactive $bg          $bg          $fg          $bg
 client.unfocused        $bg          $bg          $fg          $bg
 client.urgent           $bg          $bg          $fg          $ind
 client.placeholder      $bg          $bg          $fg          $ind
