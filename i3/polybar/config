@@ -115,6 +115,10 @@ ws-icon-2 = 2; Code
 ws-icon-3 = 3; Web
 ws-icon-4 = 4; Slack
 ws-icon-5 = 5; Music
+ws-icon-6 = 6;:6
+ws-icon-7 = 7;:7
+ws-icon-8 = 8;:8
+ws-icon-9 = 9;:9
 ws-icon-default = 
 
 format = <label-state> <label-mode>
