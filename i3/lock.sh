@@ -1,4 +1,5 @@
 #!/bin/bash
+
 revert() {
   rm /tmp/*screen*.png
 }

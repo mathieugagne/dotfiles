@@ -1,11 +1,20 @@
 set $mod Mod4
+
 set $right_monitor "DVI-D-0"
 set $left_monitor "HDMI-0"
 
 exec --no-startup-id xrandr --output $right_monitor --primary
 exec --no-startup-id xrandr --output $left_monitor --auto --left-of $right_monitor
 
+### Fonts
+
 font pango:monospace 10
+
+### Gaps
+
+gaps inner 10
+gaps outer 0
+smart_gaps on
 
 set $fg  #f8f8f2
 set $bg  #272822
