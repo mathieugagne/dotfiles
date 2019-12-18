@@ -1,0 +1,43 @@
+! https://github.com/sentakuhm/.dotfiles/blob/master/.Xresources
+
+! special
+*.foreground:  #e6d4a3
+*.background:  #1e1e1e
+*.cursorColor: #bbbbbb
+
+! black
+*.color0:      #161819
+*.color8:      #7f7061
+
+! red
+*.color1:      #f73028
+*.color9:      #be0f17
+
+! green
+*.color2:      #aab01e
+*.color10:     #868715
+
+! yellow
+*.color3:      #f7b125
+*.color11:     #cc881a
+
+! blue
+*.color4:      #719586
+*.color12:     #377375
+
+! magenta
+*.color5:      #c77089
+*.color13:     #a04b73
+
+! cyan
+*.color6:      #7db669
+*.color14:     #578e57
+
+! white
+*.color7:      #faefbb
+*.color15:     #e6d4a3
+
+! Bold, Italic, Underline
+*.colorBD:     #978771
+!*.colorIT:
+!*.colorUL:
