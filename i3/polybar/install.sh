@@ -18,13 +18,7 @@ libmpdclient-dev \
 libxcb-composite0-dev
 
 sudo rm -rf ~/.local/lib/polybar
-git clone --branch 3.4 --recursive https://github.com/jaagr/polybar ~/.local/lib/polybar
-cd ~/.local/lib/polybar/
-rm -rf build
-mkdir -p build
-cd build
-cmake ..
-sudo make install
+sudo apt install polybar
 
 mkdir -p ~/.config/polybar
-ln -fs ~/dotfiles/i3/polybar/config ~/.config/polybar/config
+ln -fs ~/dotfiles/i3/polybar/configs/monokai ~/.config/polybar/config
