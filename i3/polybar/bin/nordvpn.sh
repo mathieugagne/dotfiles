@@ -2,7 +2,9 @@
 
 set -e
 
-command -v nordvpn;
+if ! [ -x "$(command -v nordvpn)" ]; then
+  exit 1
+fi
 
 nordvpn_status=$(nordvpn status | grep Status | awk '{ print $2 }')
 
