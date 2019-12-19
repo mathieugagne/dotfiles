@@ -40,4 +40,7 @@
 ! Bold, Italic, Underline
 !*.colorBD:
 !*.colorIT:
-!*.colorUL:
+*.colorUL:     #66d9ef
+
+! Translucid background
+urxvt*background: rgba:0000/0000/0200/c800

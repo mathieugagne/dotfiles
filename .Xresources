@@ -26,9 +26,15 @@ URxvt*iso14755:               false
 URxvt*scrollBar:              false
 URxvt*scrollBar_right:        false
 URxvt.perl-ext-common:        default,matcher,clipboard
-URxvt.url-launcher:           /usr/bin/xdg-open
 URxvt.matcher.button:         1
-URxvt.colorUL:                #66d9ef
+
+URxvt.urlLauncher:            xdg-open
+URxvt.underlineURLs:          true
+URxvt.urlButton:              1
+URxvt*buffered:               false
+URxvt.urgentOnBell:           True
+
+! Copy/paste
 
 ! https://unix.stackexchange.com/questions/444773/how-to-disable-the-ctrlshift-binding-iso-14755-in-urxvt/444777#444777
 URxvt.iso14755: false
@@ -39,15 +45,14 @@ URxvt.keysym.Control-Meta-v:  builtin-string:
 URxvt.keysym.Shift-Control-V: eval:paste_clipboard
 URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
 
-URxvt.keysym.Shift-Up:        command:\033]720;1\007
-URxvt.keysym.Shift-Down:      command:\033]721;1\007
-URxvt.urlLauncher:            xdg-open
-URxvt.underlineURLs:          true
-URxvt.urlButton:              1
-URxvt*buffered:               false
-URxvt.urgentOnBell:           True
+! Navigation
 
-urxvt*background: rgba:0000/0000/0200/c800
+URxvt.keysym.Shift-Up:       command:\033]720;1\007
+URxvt.keysym.Shift-Down:     command:\033]721;1\007
+URxvt.keysym.Control-Up:     \033[1;5A
+URxvt.keysym.Control-Down:   \033[1;5B
+URxvt.keysym.Control-Left:   \033[1;5D
+URxvt.keysym.Control-Right:  \033[1;5C
 
 ! ------------------------------------------------------------------------------
 ! Xft Font Configuration
