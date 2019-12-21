@@ -50,8 +50,7 @@ font-4 = "Font Awesome 5 Brands:pixelsize=8;1"
 
 modules-left = i3 xwindow
 ;modules-center = mpd
-;modules-right = weather xkeyboard pulseaudio wifi-network battery backlight date powermenu
-modules-right = weather xkeyboard pulseaudio wifi-network battery backlight date powermenu
+modules-right = weather xkeyboard pulseaudio wifi-network date powermenu
 
 tray-position = right
 tray-padding = 5
@@ -94,21 +93,6 @@ bar-progress-fill-background = ${colors.background}
 bar-progress-indicator-foreground = ${colors.foreground}
 format-online-foreground = ${colors.foreground}
 format-online-background = ${colors.background}
-
-[module/backlight]
-type = internal/backlight
-
-; Use the following command to list available cards:
-; $ ls -1 /sys/class/backlight/
-card = intel_backlight 
-
-format = <ramp> <label>
-
-label = %percentage%%
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -169,7 +153,7 @@ label-urgent-padding = 4
 [module/wifi-network]
 type = internal/network
 
-interface = wlp4s0
+interface = ${env:WIFI_DEVICE_NAME}
 interval = 3.0
 
 label-connected = %essid%
@@ -204,29 +188,6 @@ ramp-signal-5 = ▆
 ramp-signal-6 = ▇
 ramp-signal-7 = █
 ramp-signal-foreground = ${colors.secondary}
-
-[module/battery]
-type = internal/battery
-
-battery = BAT0
-
-poll-interval = 1
-
-full-at = 98
-
-label-discharging = %percentage%%
-label-charging = %percentage%%
-label-full = %percentage%%
-
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> <label-full>
-format-charging =  <label-charging>
-
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
 
 [module/pulseaudio]
 type = internal/pulseaudio
@@ -267,7 +228,7 @@ label = %date% %time%
 
 [module/weather]
 type = custom/script
-exec = ~/.config/polybar/scripts/openweathermap-detailed.sh
+exec = ~/dotfiles/i3/polybar/bin/weather.sh
 interval = 600
 label-font = 3
 

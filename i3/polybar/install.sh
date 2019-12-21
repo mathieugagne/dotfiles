@@ -15,10 +15,14 @@ libasound2-dev \
 libcurl4 \
 libcurl4-openssl-dev \
 libmpdclient-dev \
-libxcb-composite0-dev
+libxcb-composite0-dev \
+libxcb-xrm-dev
 
 sudo rm -rf ~/.local/lib/polybar
 sudo apt install polybar
 
 mkdir -p ~/.config/polybar
+
+# Link to your desired color scheme
 ln -fs ~/dotfiles/i3/polybar/configs/monokai ~/.config/polybar/config
+# ln -fs ~/dotfiles/i3/polybar/configs/sentakuhm ~/.config/polybar/config
