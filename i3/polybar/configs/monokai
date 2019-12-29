@@ -47,36 +47,26 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = "pango:size=10;0"
-font-1 = "Font Awesome 5 Free:style=Regular:size=10;0"
-font-2 = "Font Awesome 5 Free:style=Solid:size=10;0"
-font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
-font-4 = "Weather Icons:size=12;1"
+font-0 = "Hack Nerd Font:size=12;0"
+font-1 = "Font Awesome 5 Free:style=Regular:size=8;0"
+font-2 = "Font Awesome 5 Free:style=Solid:size=8;0"
+font-3 = "Font Awesome 5 Brands:style=Regular:size=8;0"
+font-4 = "Weather Icons:size=14;1"
 
 modules-left = i3
-modules-right = hotmail weather keyboard date powermenu
-
-wm-restack = i3
-
-scroll-up = i3wm-wsnext
-scroll-down = i3wm-wsprev
+modules-center = spotify
+modules-right = hotmail weather pulseaudio keyboard date powermenu
 
 [bar/bottom]
 monitor = ${env:MAIN_MONITOR:HDMI-1}
 bottom = true
 width = 100%
 height = 32
-offset-x = 200
-offset-y = 50
-radius = 0
-fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 2
 line-color = #f00
-
-spacing 3
 
 padding-left = 2
 padding-right = 2
@@ -84,29 +74,27 @@ padding-right = 2
 module-margin-left = 2
 module-margin-right = 2
 
-font-0 = "pango:size=10;0"
-font-1 = "Font Awesome 5 Free:style=Regular:size=10;0"
-font-2 = "Font Awesome 5 Free:style=Solid:size=10;0"
-font-3 = "Font Awesome 5 Brands:style=Regular:size=10;0"
+font-0 = "Hack Nerd Font:size=12;0"
+font-1 = "Font Awesome 5 Free:style=Regular:size=8;0"
+font-2 = "Font Awesome 5 Free:style=Solid:size=8;0"
+font-3 = "Font Awesome 5 Brands:style=Regular:size=8;0"
 
-modules-left = spotify volume
-modules-right = wireless-network nordvpn public-ip-address cpu memory
+modules-left = public-ip-address wireless-network
+modules-right = cpu memory
+
+tray-position = right
+tray-padding = 5
+tray-reparent = true
 
 [module/i3]
 type = internal/i3
-
 pin-workspaces = false
-
-;strip-wsnumbers = true
-
+strip-wsnumbers = false
 index-sort = true
-
 enable-click = true
-
 enable-scroll = false
-
 wrapping-scroll = false
-
+reverse-scroll = false
 fuzzy-match = true
 
 ws-icon-0 = 0;
@@ -174,20 +162,21 @@ label-close-foreground = ${colors.primary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
 
-menu-0-0 = reboot
+menu-0-0 = logout
 menu-0-0-exec = menu-open-1
-menu-0-1 = power off
+menu-0-1 = restart
 menu-0-1-exec = menu-open-2
+menu-0-2 = power off
+menu-0-2-exec = menu-open-3
 
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = reboot
+menu-1-0 = logout
+menu-1-0-exec = i3-msg exit
 
-menu-2-0 = power off
-menu-2-0-exec = poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
+menu-2-0 = restart
+menu-2-0-exec = reboot
+
+menu-3-0 = power off
+menu-3-0-exec = poweroff
 
 [module/spotify]
 type = custom/script
@@ -199,32 +188,20 @@ format-prefix-foreground = ${colors.yellow}
 format-suffix-foreground = ${colors.yellow}
 format-overline = #2E2F35
 
-[module/volume]
-type = internal/volume
+[module/pulseaudio]
+type = internal/pulseaudio
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+sink = alsa_output.pci-0000_00_1f.3.analog-stereo
+use-ui-max = true
+interval = 5
+format-volume = <ramp-volume>
 
-format-volume =  <bar-volume>
-label-volume = 
-label-volume-foreground = ${root.foreground}
+label-muted = ﱝ
 
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.green}
-bar-volume-foreground-1 = ${colors.green}
-bar-volume-foreground-2 = ${colors.green}
-bar-volume-foreground-3 = ${colors.green}
-bar-volume-foreground-4 = ${colors.green}
-bar-volume-foreground-5 = ${colors.yellow}
-bar-volume-foreground-6 = ${colors.red}
-bar-volume-gradient = true
-bar-volume-indicator =
-bar-volume-fill = 
-bar-volume-fill-font = 3
-bar-volume-empty = 
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
 
 [module/wireless-network]
 type = internal/network
@@ -233,15 +210,17 @@ interval = 1.0
 ping-interval = 10
 
 format-connected = <ramp-signal> <label-connected>
-label-connected = %{F#66}%essid%    %downspeed:7%
+label-connected =  %essid%    %downspeed:7%   %upspeed:7%
+label-connected-foreground = ${colors.foreground-alt}
 label-disconnected =    not connected
 label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = "▂"
-ramp-signal-1 = "▂▃"
-ramp-signal-2 = "▂▃▅"
-ramp-signal-3 = "▂▃▅▆"
-ramp-signal-4 = "▂▃▅▆█"
+ramp-signal-0 = ""
+ramp-signal-1 = "▂"
+ramp-signal-2 = "▂▃"
+ramp-signal-3 = "▂▃▅"
+ramp-signal-4 = "▂▃▅▆"
+ramp-signal-5 = "▂▃▅▆█"
 ramp-signal-foreground = ${colors.foreground-alt}
 
 animation-packetloss-0 = 
@@ -254,43 +233,36 @@ animation-packetloss-framerate = 500
 type = custom/script
 exec = ~/dotfiles/i3/polybar/bin/nordvpn.sh
 interval = 5
-label-font = 5
 
 [module/public-ip-address]
 type = custom/script
 exec = ~/dotfiles/i3/polybar/bin/public-ip-address.sh
-interval = 3600
+interval = 5
 label-font = 5
 
 [module/cpu]
 type = internal/cpu
 interval = 0.5
 format = <label> <ramp-coreload>
-label = CPU
+label = CPU %percentage%%
 
+ramp-coreload-font = 2
+ramp-coreload-spacing = 1
 ramp-coreload-0 = ▁
-ramp-coreload-0-font = 2
 ramp-coreload-0-foreground = ${colors.green}
 ramp-coreload-1 = ▂
-ramp-coreload-1-font = 2
 ramp-coreload-1-foreground = ${colors.green}
 ramp-coreload-2 = ▃
-ramp-coreload-2-font = 2
 ramp-coreload-2-foreground = ${colors.green}
 ramp-coreload-3 = ▄
-ramp-coreload-3-font = 2
 ramp-coreload-3-foreground = ${colors.green}
 ramp-coreload-4 = ▅
-ramp-coreload-4-font = 2
 ramp-coreload-4-foreground = ${colors.yellow}
 ramp-coreload-5 = ▆
-ramp-coreload-5-font = 2
 ramp-coreload-5-foreground = ${colors.yellow}
 ramp-coreload-6 = ▇
-ramp-coreload-6-font = 2
 ramp-coreload-6-foreground = ${colors.red}
 ramp-coreload-7 = █
-ramp-coreload-7-font = 2
 ramp-coreload-7-foreground = ${colors.red}
 
 [module/memory]
@@ -342,20 +314,6 @@ type = custom/script
 exec = ~/dotfiles/i3/polybar/bin/hotmail.sh
 interval = 60
 label = %{F#66d9ef} %output%
-click-left = google-chrome https://outlook.live.com/owa/
-
-[module/potloc-email]
-type = custom/script
-exec = ~/dotfiles/i3/polybar/bin/potloc-email.sh
-interval = 60
-label = %{F#66d9ef} %output%
-click-left = google-chrome https://mail.google.com/mail/u/0/?tab=cm#inbox
-
-[module/unisafety-email]
-type = custom/script
-exec = ~/dotfiles/i3/polybar/bin/unisafety-email.sh
-interval = 60
-label = %{F#66d9ef} %output%
 click-left = google-chrome https://outlook.live.com/owa/
 
 [module/github]
