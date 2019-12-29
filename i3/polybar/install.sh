@@ -1,25 +1,21 @@
 #!/usr/bin/env sh
 
-sudo apt install cmake cmake-data pkg-config \
-libcairo2-dev \
-libxcb1-dev libxcb-util0-dev libxcb-randr0-dev \
-python-xcbgen xcb-proto \
-libxcb-image0-dev \
-libxcb-ewmh-dev libxcb-icccm4-dev \
-libpulse-dev \
-libxcb-xkb-dev \
-libiw-dev \
-libnl-3-dev \
-wireless-tools \
-libasound2-dev \
-libcurl4 \
-libcurl4-openssl-dev \
-libmpdclient-dev \
-libxcb-composite0-dev \
-libxcb-xrm-dev
+# https://github.com/polybar/polybar/wiki/Compiling
+sudo apt install build-essential git cmake cmake-data pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python-xcbgen xcb-proto libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
+sudo apt install libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libasound2-dev libpulse-dev libjsoncpp-dev libmpdclient-dev libcurl4-openssl-dev libnl-genl-3-dev
 
 sudo rm -rf ~/.local/lib/polybar
-sudo apt install polybar
+
+git clone --recursive https://github.com/polybar/polybar ~/.local/lib/polybar
+cd ~/.local/lib/polybar
+
+# Compiling
+mkdir build
+cd build
+cmake ..
+make -j$(nproc)
+# Optional. This will install the polybar executable in /usr/local/bin
+sudo make install
 
 mkdir -p ~/.config/polybar
 
