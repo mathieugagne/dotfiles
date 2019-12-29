@@ -3,8 +3,8 @@ set $mod Mod4
 set $left_monitor "DVI-D-0"
 set $right_monitor "HDMI-0"
 
-exec --no-startup-id xrandr --output $right_monitor --primary
-exec --no-startup-id xrandr --output $left_monitor --auto --left-of $right_monitor
+exec --no-startup-id xrandr --output $right_monitor --primary --right-of $left_monitor
+exec --no-startup-id xrandr --output $left_monitor --auto
 
 ### Fonts
 
