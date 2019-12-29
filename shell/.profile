@@ -37,13 +37,9 @@ export PATH="$GOPATH/bin:$PATH"
 # pip
 export PATH="$HOME/.local/bin:$PATH"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# https://github.com/nvm-sh/nvm/issues/539#issuecomment-245791291
-alias node='unalias node ; unalias npm ; nvm use default ; node $@'
-alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
+# n
+export N_PREFIX="$HOME/.n"
+export PATH=$N_PREFIX/bin:$PATH
 
 # dev binaries
 . "$HOME/dotfiles/bin/.env"
