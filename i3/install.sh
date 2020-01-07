@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-sudo add-apt-repository ppa:kgilmer/speed-ricer
+sudo add-apt-repository -y ppa:kgilmer/speed-ricer
 sudo apt-get update
-sudo apt-get install i3-gaps
+sudo apt-get install -y i3-gaps
 
 mkdir -p ~/.config/i3
 ln -fs ~/dotfiles/i3/config ~/.config/i3/config
