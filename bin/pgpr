@@ -2,7 +2,8 @@
 # frozen_string_literal: true
 
 def jira_issue_number
-  `git rev-parse --abbrev-ref HEAD`.match(/^POT-(\d*)/)[1]
+  match = `git rev-parse --abbrev-ref HEAD`.match(/^POT-(\d*)/)
+  match && match[1]
 end
 
 def jira_summary
@@ -35,9 +36,16 @@ def github_pr_message
   "_none_"
 end
 
-system("hub pull-request --base develop \
-                         --push \
-                         --draft \
-                         --assign mathieugagne \
-                         --message \"#{github_pr_title}\" \
-                         --message \"#{github_pr_message}\"")
+if jira_issue_number
+  system("hub pull-request --base develop \
+                          --push \
+                          --draft \
+                          --assign mathieugagne \
+                          --message \"#{github_pr_title}\" \
+                          --message \"#{github_pr_message}\"")
+else
+  system("hub pull-request --base develop \
+                          --push \
+                          --draft \
+                          --assign mathieugagne")
+end
