@@ -2,9 +2,12 @@
 ! Colors
 ! ------------------------------------------------------------------------------
 
-#include "dotfiles/xrdb/colors/sentakuhm"
+! #include "dotfiles/xrdb/colors/sentakuhm"
 ! #include "dotfiles/xrdb/colors/monokai"
+#include "dotfiles/xrdb/colors/nord"
+
 #include "dotfiles/rofi/colors/monokai"
+! #include "dotfiles/rofi/colors/nord"
 
 ! ------------------------------------------------------------------------------
 ! URxvt configs
