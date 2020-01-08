@@ -21,7 +21,7 @@ URxvt.lineSpace:              0
 URxvt*internalBorder:         24
 URxvt*externalBorder:         0
 URxvt*depth:                  32
-URxvt*saveline:               2000
+URxvt*saveLines:              1000000
 URxvt*termName:               rxvt-256color
 URxvt*iso14755:               false
 URxvt*scrollBar:              false
