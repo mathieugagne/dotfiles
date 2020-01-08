@@ -15,12 +15,14 @@ wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Hack.z
 wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/LiberationMono.zip
 wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Noto.zip
 wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/Monofur.zip
+wget -nc https://github.com/ryanoasis/nerd-fonts/releases/download/v2.0.0/SourceCodePro.zip
 
-unzip -f UbuntuMono.zip
-unzip -f Hack.zip
-unzip -f LiberationMono.zip
-unzip -f Noto.zip
-unzip -f Monofur.zip
+unzip -u UbuntuMono.zip
+unzip -u Hack.zip
+unzip -u LiberationMono.zip
+unzip -u Noto.zip
+unzip -u Monofur.zip
+unzip -u SourceCodePro.zip
 
 mv *.ttf ~/.local/share/fonts/
 
