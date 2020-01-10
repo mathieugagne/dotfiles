@@ -3,6 +3,7 @@
 set -e
 
 if ! [ -x "$(command -v nordvpn)" ]; then
+  echo "%{F#ff5555}%{F-}"
   exit 1
 fi
 
