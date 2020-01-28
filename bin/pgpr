@@ -15,7 +15,7 @@ def jira_description
 end
 
 def accomplishments
-  commits = `git log --pretty="%s" origin/develop..HEAD`.split("\n")
+  commits = `git log --pretty="%s" origin/develop..HEAD`.split("\n").reverse
   commits.map do |commit|
     %(- [x] #{commit.match(/^POT-\d*\W(.*)/)[1]})
   end.join("\n")
