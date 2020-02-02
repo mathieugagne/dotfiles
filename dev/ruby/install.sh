@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-sudo apt install -y libssl-dev libreadline-dev zlib1g-dev libpq-dev libsqlite3-dev
+sudo apt install -y libssl-dev libreadline-dev zlib1g-dev libpq-dev libsqlite3-dev libxml2-dev
 
 ln -fs ~/dotfiles/dev/ruby/.gemrc ~/.gemrc
 ln -fs ~/dotfiles/dev/ruby/.pryrc ~/.pryrc
