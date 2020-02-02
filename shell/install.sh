@@ -8,6 +8,8 @@ ln -fs ~/dotfiles/shell/.bash_aliases ~/.bash_aliases
 ln -fs ~/dotfiles/shell/.profile ~/.profile
 ln -fs ~/dotfiles/shell/.gitconfig ~/.gitconfig
 
+source ~/.bash_aliases
+
 cp ~/dotfiles/shell/themes/oxide.zsh-theme ~/.oh-my-zsh/themes/oxide.zsh-theme
 
 # ZSH
