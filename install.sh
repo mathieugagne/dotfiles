@@ -11,3 +11,5 @@ docker/install.sh
 spotify/install.sh
 vscode/install.sh
 slack/install.sh
+
+sudo apt autoremove
