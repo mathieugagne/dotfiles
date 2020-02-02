@@ -5,7 +5,9 @@ sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubun
 sudo apt update
 sudo apt install -y docker-ce
 
-sudo usermod -aG docker ${USER}
+# Run docker as non-root
+sudo groupadd docker
+sudo usermod -aG docker $(whoami)
 
 # docker-compose
 # https://docs.docker.com/compose/install/#install-compose
