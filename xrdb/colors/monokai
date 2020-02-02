@@ -44,6 +44,3 @@
 
 ! Translucid background
 urxvt*background: rgba:0000/0000/0200/c800
-
-! Font
-URxvt.font: xft:Hack Nerd Font:size=11

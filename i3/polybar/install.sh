@@ -20,5 +20,6 @@ sudo make install
 mkdir -p ~/.config/polybar
 
 # Link to your desired color scheme
-ln -fs ~/dotfiles/i3/polybar/configs/monokai ~/.config/polybar/config
+ln -fs ~/dotfiles/i3/polybar/configs/dracula ~/.config/polybar/config
+# ln -fs ~/dotfiles/i3/polybar/configs/monokai ~/.config/polybar/config
 # ln -fs ~/dotfiles/i3/polybar/configs/sentakuhm ~/.config/polybar/config

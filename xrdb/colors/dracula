@@ -1,6 +1,3 @@
-URxvt.font: xft:Hack Nerd Font:size=11
-urxvt*background: rgba:0000/0000/0200/c800
-
 ! Dracula Xresources palette
 ! https://github.com/dracula/xresources
 *.foreground: #F8F8F2
@@ -21,3 +18,5 @@ urxvt*background: rgba:0000/0000/0200/c800
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF
 *.color15:    #E6E6E6
+
+urxvt*background: [50]#282A36

@@ -13,7 +13,7 @@ font pango:monospace 10
 ### Gaps
 
 gaps inner 10
-gaps outer 0
+gaps outer 5
 smart_gaps on
 
 set $fg  #f8f8f2
@@ -36,7 +36,7 @@ client.background       $bg
 
 exec_always --no-startup-id ~/dotfiles/i3/polybar/launch.sh
 
-exec_always feh --bg-scale ~/dotfiles/pictures/desktop-background-2.jpg
+exec_always feh --bg-scale ~/dotfiles/pictures/sunset.jpg
 exec_always nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id numlockx on
@@ -162,7 +162,7 @@ bindsym $mod+d kill
 
 # Program launcher
 # bindsym $mod+d exec dmenu_run
-bindsym $mod+space exec rofi -show run
+bindsym $mod+space exec rofi -show run -config ~/dotfiles/rofi/colors/dracula.rasi
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications

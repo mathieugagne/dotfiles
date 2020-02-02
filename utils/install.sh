@@ -9,7 +9,7 @@ sudo apt install -y wget htop tree curl git vim bmon iftop xclip jq
 sudo apt install -y ranger
 
 # Multimedia
-sudo apt install -y feh neofetch mpv scrot
+sudo apt install -y feh neofetch mpv scrot nitrogen pavucontrol
 
 # Monitoring
 sudo apt install -y htop iftop

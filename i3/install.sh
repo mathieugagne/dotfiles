@@ -2,7 +2,7 @@
 
 sudo add-apt-repository -y ppa:kgilmer/speed-ricer
 sudo apt-get update
-sudo apt-get install -y i3-gaps rofi
+sudo apt-get install -y i3-gaps rofi nitrogen
 
 mkdir -p ~/.config/i3
 ln -fs ~/dotfiles/i3/config ~/.config/i3/config

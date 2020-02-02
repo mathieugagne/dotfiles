@@ -7,12 +7,16 @@
 ! #include "dotfiles/xrdb/colors/nord"
 ! #include "dotfiles/xrdb/colors/sentakuhm"
 
-#include "dotfiles/rofi/colors/monokai"
-! #include "dotfiles/rofi/colors/nord"
+! #include "dotfiles/rofi/colors/monokai"
 
 ! ------------------------------------------------------------------------------
 ! URxvt configs
 ! ------------------------------------------------------------------------------
+
+URxvt.font: xft:Hack Nerd Font:size=11
+URxvt.transparent: true
+URxvt.shading: 25
+URxvt.inheritPixmap: true
 
 URxvt.geometry:               72x18
 URxvt*letterSpace:            0
