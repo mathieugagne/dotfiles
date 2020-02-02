@@ -2,9 +2,10 @@
 ! Colors
 ! ------------------------------------------------------------------------------
 
-! #include "dotfiles/xrdb/colors/sentakuhm"
+#include "dotfiles/xrdb/colors/dracula"
 ! #include "dotfiles/xrdb/colors/monokai"
-#include "dotfiles/xrdb/colors/nord"
+! #include "dotfiles/xrdb/colors/nord"
+! #include "dotfiles/xrdb/colors/sentakuhm"
 
 #include "dotfiles/rofi/colors/monokai"
 ! #include "dotfiles/rofi/colors/nord"
