@@ -2,6 +2,7 @@ alias cdw="cd ~/workspace/"
 alias cdp="cd ~/personal/"
 
 alias ll="ls -lAh"
+alias psgrep="ps aux | grep"
 
 # Utilities
 alias xclip="xclip -selection c"
