@@ -1,8 +1,7 @@
 alias cdw="cd ~/workspace/"
 alias cdp="cd ~/personal/"
 
-# colorls gem
-# alias ll="colorls -lAh --sd"
+alias ll="ls -lAh"
 
 # Utilities
 alias xclip="xclip -selection c"
@@ -48,9 +47,6 @@ alias fs="be foreman start"
 # capistrano
 alias bcs="be cap staging"
 alias bcp="be cap production"
-
-# editor
-alias ee="subl -a ."
 
 # git
 alias gbclean="git checkout master && git branch --merged | grep -v master | xargs git branch -d"
