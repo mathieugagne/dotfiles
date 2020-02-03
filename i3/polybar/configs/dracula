@@ -81,7 +81,7 @@ line-size = 3
 line-color = #f00
 
 padding-left = 1
-padding-right = 1
+padding-right = 3
 
 module-margin-left = 1
 module-margin-right = 1
@@ -138,7 +138,7 @@ exec = python3 ~/dotfiles/i3/polybar/bin/spotify.py -f '{artist} - {song}'
 
 [module/network]
 type = custom/script
-interval = 2
+interval = 10
 exec = dash ~/dotfiles/i3/polybar/bin/network.dash
 format = <label>
 
