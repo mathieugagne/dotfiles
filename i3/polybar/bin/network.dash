@@ -1,5 +1,7 @@
 #!/bin/dash
-WIFI_STATUS=$(cat /sys/class/net/wlp5s0/operstate);
+
+WIFI_DEVICE_NAME="$(~/dotfiles/i3/polybar/bin/wifi_device_name.sh)"
+WIFI_STATUS=$(cat /sys/class/net/$WIFI_DEVICE_NAME/operstate);
 CONNECTION=$(nmcli -t -f name connection show --active);
 if [ "$WIFI_STATUS" = "up" ];
 then
