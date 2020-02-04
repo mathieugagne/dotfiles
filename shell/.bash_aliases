@@ -50,7 +50,7 @@ alias bcs="be cap staging"
 alias bcp="be cap production"
 
 # git
-alias gbclean="git checkout master && git branch --merged | grep -v master | xargs git branch -d"
+alias gbclean="git checkout develop && git branch --merged | grep -v develop | xargs git branch -d"
 alias gbpurge="git branch | grep -v -E \"master|develop\" | xargs git branch -D"
 alias gcmgs="gcmsg"
 alias gcmsg!="OVERCOMMIT_DISABLED=1 gcmsg"
