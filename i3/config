@@ -38,6 +38,7 @@ exec_always nitrogen --restore
 exec_always ~/dotfiles/i3/polybar/launch.sh
 exec --no-startup-id compton
 exec --no-startup-id numlockx on
+exec --no-startup-id xset r rate 220 40
 
 
 workspace 1 output $left_monitor
