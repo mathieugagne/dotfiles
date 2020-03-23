@@ -1,6 +1,7 @@
 [user]
   email = gagne.mathieu@hotmail.com
   name = Mathieu Gagné
+	username = mathieugagne
 
 [alias]
   pr = !pgpr
