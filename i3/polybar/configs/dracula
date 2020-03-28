@@ -95,10 +95,6 @@ modules-left = i3 xwindow
 modules-center =
 modules-right = network powermenu
 
-tray-position = right
-tray-padding = 5
-tray-reparent = true
-
 wm-restack = i3
 
 scroll-up = i3wm-wsnext
