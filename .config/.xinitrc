@@ -14,5 +14,8 @@
 # Increase repeat key rate
 /usr/bin/xset r rate 220 40
 
+# Allow additional keyboard layout
+/usr/bin/setxkbmap -layout "us,ca"
+
 # Start Xsession
 . /etc/X11/Xsession
