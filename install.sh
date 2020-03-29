@@ -1,11 +1,14 @@
 #!/usr/bin/env sh
 
 utils/install.sh
-shell/install.sh
+zsh/install.sh
+xrdb/install.sh
+urxvt/install.sh
 fonts/install.sh
 vim/install.sh
 dev/install.sh
 docker/install.sh
+rofi/install.sh
 i3/install.sh
 polybar/install.sh
 dunst/install.sh
@@ -13,5 +16,6 @@ dunst/install.sh
 spotify/install.sh
 vscode/install.sh
 slack/install.sh
+.config/install.sh
 
 sudo apt autoremove
