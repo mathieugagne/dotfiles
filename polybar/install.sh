@@ -21,7 +21,6 @@ mkdir -p ~/.config/polybar
 
 # Link to your desired color scheme
 # ln -fs ~/dotfiles/polybar/themes/space.ini ~/.config/polybar/config
-# ln -fs ~/dotfiles/polybar/themes/dracula.ini ~/.config/polybar/config
-ln -fs ~/dotfiles/polybar/themes/dracula2.ini ~/.config/polybar/config
+ln -fs ~/dotfiles/polybar/themes/dracula.ini ~/.config/polybar/config
 # ln -fs ~/dotfiles/polybar/themes/monokai.ini ~/.config/polybar/config
 # ln -fs ~/dotfiles/polybar/themes/sentakuhm.ini ~/.config/polybar/config
