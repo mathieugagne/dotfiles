@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 
-xrandr --output HDMI-1 --primary --right-of DVI-D-1 --mode 2560x1440 --panning 0x0+0+0
-xrandr --output DVI-D-1 --auto
+xrandr --output HDMI-0 --right-of DVI-D-0 --mode 2560x1440 --primary
+xrandr --output DVI-D-0 --pos 0x0 --mode 1920x1080
