@@ -1,0 +1,11 @@
+#!/bin/dash
+
+WIFI_DEVICE_NAME="$(~/dotfiles/scripts/wifi_device_name.sh)"
+WIFI_STATUS=$(cat /sys/class/net/$WIFI_DEVICE_NAME/operstate);
+if [ "$WIFI_STATUS" = "up" ];
+then
+  ICON="";
+else
+  ICON="";
+fi
+echo "$ICON"
