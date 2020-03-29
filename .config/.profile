@@ -41,6 +41,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export N_PREFIX="$HOME/.n"
 export PATH=$N_PREFIX/bin:$PATH
 
-# dev binaries
-. "$HOME/dotfiles/bin/.env"
-export PATH="$HOME/dotfiles/bin:$PATH"
+# Scripts
+. "$HOME/dotfiles/scripts/.env"
+export PATH="$HOME/dotfiles/scripts:$PATH"
