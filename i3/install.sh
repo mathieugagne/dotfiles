@@ -2,7 +2,7 @@
 
 sudo add-apt-repository -y ppa:kgilmer/speed-ricer
 sudo apt-get update
-sudo apt-get install -y i3-gaps rofi nitrogen numlockx
+sudo apt-get install -y i3-gaps numlockx
 
 mkdir -p ~/.config/i3
 ln -fs ~/dotfiles/i3/config.ini ~/.config/i3/config
