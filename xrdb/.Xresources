@@ -2,12 +2,12 @@
 ! Colors
 ! ------------------------------------------------------------------------------
 
-#include "dotfiles/xrdb/colors/dracula"
-! #include "dotfiles/xrdb/colors/monokai"
-! #include "dotfiles/xrdb/colors/nord"
-! #include "dotfiles/xrdb/colors/sentakuhm"
+#include "dotfiles/xrdb/themes/dracula"
+! #include "dotfiles/xrdb/themes/monokai"
+! #include "dotfiles/xrdb/themes/nord"
+! #include "dotfiles/xrdb/themes/sentakuhm"
 
-! #include "dotfiles/rofi/colors/monokai"
+! #include "dotfiles/rofi/themes/monokai"
 
 ! ------------------------------------------------------------------------------
 ! URxvt configs
