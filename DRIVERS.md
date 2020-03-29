@@ -10,7 +10,7 @@ https://www.mvps.net/docs/install-nvidia-drivers-ubuntu-18-04-lts-bionic-beaver-
 sudo apt-get purge nvidia*
 sudo add-apt-repository ppa:graphics-drivers
 sudo apt update
-sudo apt install nvidia-driver-390
+sudo apt install nvidia-driver-435 nvidia-settings
 sudo reboot
 ```
 
