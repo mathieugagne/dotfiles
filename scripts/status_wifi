@@ -1,13 +1,15 @@
 #!/bin/dash
 
-WIFI_DEVICE_NAME="$(~/dotfiles/scripts/wifi_device_name.sh)"
+WIFI_DEVICE_NAME="$(nmcli device | grep wifi | awk '{ print $1 }')"
 WIFI_STATUS=$(cat /sys/class/net/$WIFI_DEVICE_NAME/operstate);
 # CONNECTION=$(nmcli -t -f name connection show --active);
 if [ "$WIFI_STATUS" = "up" ];
 then
-  ICON="%{F#55aa55}%{F-}";
+  ICON="";
+  # ICON="%{F#55aa55}%{F-}";
 else
-  ICON="%{F#ff5555}%{F-}";
+  ICON="";
+  # ICON="%{F#ff5555}%{F-}";
   # CONNECTION="Disconnected"
 fi
 # echo "$ICON  $CONNECTION"
