@@ -29,7 +29,7 @@ URxvt*termName:               rxvt-256color
 URxvt*iso14755:               false
 URxvt*scrollBar:              false
 URxvt*scrollBar_right:        false
-URxvt.perl-ext-common:        default,matcher,clipboard
+URxvt.perl-ext-common:        default,matcher,clipboard,font-size
 URxvt.matcher.button:         1
 
 URxvt.urlLauncher:            xdg-open
@@ -37,6 +37,11 @@ URxvt.underlineURLs:          true
 URxvt.urlButton:              1
 URxvt*buffered:               false
 URxvt.urgentOnBell:           True
+
+! Zoom
+URxvt.keysym.Ctrl-Shift-equal: perl:font-size:increase
+URxvt.keysym.Ctrl-minus: perl:font-size:decrease
+URxvt.keysym.Ctrl-0: perl-font-size:reset
 
 ! Copy/paste
 
