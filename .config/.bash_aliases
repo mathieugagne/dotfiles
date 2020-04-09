@@ -28,7 +28,7 @@ alias avd='ansible-vault decrypt'
 
 # Rails server
 alias rs='bin/rails s'
-alias rc='SKIP_YARN_INTEGRITY_CHECK=true bin/rails c'
+alias rc='bin/rails c'
 alias rp='bin/rspec'
 alias rsp='EXCLUDE_FEATURE_TESTS=true EXCLUDE_INTEGRATION_TESTS=true bin/rspec'
 alias rpof='bin/rspec --only-failures'
