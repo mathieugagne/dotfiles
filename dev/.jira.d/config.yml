@@ -1,9 +1,13 @@
 endpoint: https://potloc.atlassian.net
 login: mat@potloc.com
 authentication-method: api-token
-project: POT
 
 custom-commands:
+  - name: project
+    help: display current project shorthand
+    script: |-
+      echo $JIRA_PROJECT
+
   - name: mine
     help: display issues assigned to me
     script: |-
@@ -32,7 +36,7 @@ custom-commands:
       - name: ISSUE_NUMBER
         required: true
     script: |-
-      jira view POT-{{args.ISSUE_NUMBER}} -t debug | jq -r ".fields.summary"
+      jira view $JIRA_PROJECT-{{args.ISSUE_NUMBER}} -t debug | jq -r ".fields.summary"
 
   - name: standup
     help: Every story changes of yesterday
