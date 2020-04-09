@@ -1,8 +1,12 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+def current_branch
+  `git rev-parse --abbrev-ref HEAD`.strip
+end
+
 def jira_issue_number
-  match = `git rev-parse --abbrev-ref HEAD`.match(/^POT-(\d*)/)
+  match = current_branch.match(/^#{jira_project}-(\d*)/)
   match && match[1]
 end
 
@@ -11,25 +15,29 @@ def jira_summary
 end
 
 def jira_description
-  %(`jira view --field=description -t debug POT-#{jira_issue_number} | jq -r ".fields.description"`)
+  %(`jira view --field=description -t debug #{jira_project}-#{jira_issue_number} | jq -r ".fields.description"`)
+end
+
+def jira_project
+  `jira project`.strip
 end
 
 def accomplishments
-  commits = `git log --pretty="%s" origin/develop..HEAD`.split("\n").reverse
+  commits = `git log --pretty="%s" origin/HEAD..HEAD`.split("\n").reverse.map(&:strip)
   commits.map do |commit|
-    %(- [x] #{commit.match(/^POT-\d*\W(.*)/)[1]})
+    %(- [x] #{commit.match(/^#{jira_project}-\d*\W(.*)/)[1]})
   end.join("\n")
 end
 
 def github_pr_title
-  "POT-#{jira_issue_number} #{jira_summary}"
+  "#{jira_project}-#{jira_issue_number} #{jira_summary}"
 end
 
 def github_pr_message
   "### Why\n\n" \
   "#{jira_description}\n\n" \
   "### Ticket\n\n" \
-  "https://potloc.atlassian.net/browse/POT-#{jira_issue_number}\n\n" \
+  "https://potloc.atlassian.net/browse/#{jira_project}-#{jira_issue_number}\n\n" \
   "### Accomplishments\n\n" \
   "#{accomplishments}\n\n" \
   "### Testing\n\n" \
@@ -38,14 +46,14 @@ end
 
 if jira_issue_number
   system("hub pull-request --base develop \
-                          --push \
-                          --draft \
-                          --assign mathieugagne \
-                          --message \"#{github_pr_title}\" \
-                          --message \"#{github_pr_message}\"")
+                           --push \
+                           --draft \
+                           --assign mathieugagne \
+                           --message \"#{github_pr_title}\" \
+                           --message \"#{github_pr_message}\"")
 else
   system("hub pull-request --base develop \
-                          --push \
-                          --draft \
-                          --assign mathieugagne")
+                           --push \
+                           --draft \
+                           --assign mathieugagne")
 end

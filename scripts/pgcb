@@ -11,8 +11,12 @@ def jira_summary
   `jira summary #{jira_issue_number}`.strip
 end
 
+def jira_project
+  `jira project`.strip
+end
+
 def branch_name
-  "POT-#{jira_issue_number}-#{jira_summary.parameterize}"
+  "#{jira_project}-#{jira_issue_number}-#{jira_summary.parameterize}"
 end
 
 system("git checkout -b #{branch_name}")
