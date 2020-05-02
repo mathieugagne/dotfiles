@@ -6,6 +6,8 @@
 [alias]
   pr = !pgpr
   start = !pgcb $1
+  continue = !pcontinue $1
+  purge = !ppurge
   current-branch = !git rev-parse --abbrev-ref HEAD
 [pager]
   branch = false

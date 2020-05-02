@@ -1,0 +1,92 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require "active_support/inflector"
+require "open3"
+
+class GitBranch
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def jira_ticket
+    @jira_ticket ||= JiraTicket.init_from_git_branch(self)
+  end
+
+  def done?
+    !jira_ticket.found? || jira_ticket.completed?
+  end
+
+  def delete
+    `git branch -D #{name}`
+  end
+end
+
+class JiraTicket
+  attr_reader :issue
+
+  def initialize(issue)
+    @issue = issue
+  end
+
+  def completed?
+    status.match?("done")
+  end
+
+  def found?
+    @found ||= begin
+      _stdout, _stderr, status = Open3.capture3("jira view #{issue}")
+      status.success?
+    end
+  end
+
+  def summary
+    @summary ||= begin
+      return nil unless found?
+
+      `jira view #{issue} -t debug | jq -r ".fields.summary"`.strip
+    end
+  end
+
+  def status
+    @status ||= begin
+      return nil unless found?
+
+      `jira view #{issue} -t debug | jq -r ".fields.status.statusCategory.key"`.strip
+    end
+  end
+
+  class << self
+    def init_from_git_branch(git_branch)
+      jira_project = `jira project`.strip
+      issue = git_branch.name.scan(/#{jira_project}-\d*/)[0]
+      new(issue)
+    end
+  end
+end
+
+
+def fetch_remote_branches
+  `git fetch --all --prune`
+end
+
+def git_branches
+  @git_branches ||= begin
+    branches = `git branch | grep $(jira project)`.split("\n").map(&:strip)
+    branches.map { |b| GitBranch.new(b) }
+  end
+end
+
+fetch_remote_branches
+git_branches.each do |git_branch|
+  if !git_branch.jira_ticket.found?
+    puts "Could not find a matching Jira ticket for #{git_branch.name}"
+  end
+
+  if git_branch.done?
+    puts "Deleting completed branch #{git_branch.name}"
+    git_branch.delete
+  end
+end
