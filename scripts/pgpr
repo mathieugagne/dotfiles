@@ -23,7 +23,7 @@ def jira_project
 end
 
 def accomplishments
-  commits = `git log --pretty="%s" origin/HEAD..HEAD`.split("\n").reverse.map(&:strip)
+  commits = `git log --pretty="%s" origin/develop..HEAD`.split("\n").reverse.map(&:strip)
   commits.map do |commit|
     %(- [x] #{commit.match(/^#{jira_project}-\d*\W(.*)/)[1]})
   end.join("\n")
