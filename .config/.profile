@@ -25,7 +25,9 @@ fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+if [ -x "$(command -v rbenv)" ]; then
+  eval "$(rbenv init -)"
+fi
 
 # rust
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -42,5 +44,7 @@ export N_PREFIX="$HOME/.n"
 export PATH=$N_PREFIX/bin:$PATH
 
 # Scripts
-. "$HOME/dotfiles/scripts/.env"
 export PATH="$HOME/dotfiles/scripts:$PATH"
+if [ -f "$HOME/dotfiles/scripts/.env" ]; then
+  . "$HOME/dotfiles/scripts/.env"
+fi
