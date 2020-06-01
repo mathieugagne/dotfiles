@@ -8,14 +8,5 @@
 
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
-# Enable numlock on keyboard
-/usr/bin/numlockx on
-
-# Increase repeat key rate
-/usr/bin/xset r rate 220 40
-
-# Allow additional keyboard layout
-/usr/bin/setxkbmap -layout "us,ca"
-
 # Start Xsession
 . /etc/X11/Xsession

@@ -8,6 +8,15 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
+# Enable numlock on keyboard
+/usr/bin/numlockx on
+
+# Increase repeat key rate
+/usr/bin/xset r rate 220 40
+
+# Allow additional keyboard layout
+/usr/bin/setxkbmap -layout "us,ca"
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
