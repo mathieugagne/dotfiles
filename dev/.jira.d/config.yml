@@ -36,7 +36,11 @@ custom-commands:
       - name: ISSUE_NUMBER
         required: true
     script: |-
-      jira view $JIRA_PROJECT-{{args.ISSUE_NUMBER}} -t debug | jq -r ".fields.summary"
+      if [ -n "$JIRA_PROJECT" ]; then
+        jira view $JIRA_PROJECT-{{args.ISSUE_NUMBER}} -t debug | jq -r ".fields.summary"
+      else
+        jira view {{args.ISSUE_NUMBER}} -t debug | jq -r ".fields.summary"
+      fi
 
   - name: standup
     help: Every story changes of yesterday
