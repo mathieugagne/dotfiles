@@ -5,20 +5,13 @@ def commit_message
   ARGV[0]
 end
 
-def jira_project
-  `jira project`.strip
-end
-
-def potloc_ticket
+def jira_issue_number
   current_branch = `git rev-parse --abbrev-ref HEAD`
-  potloc_ticket = current_branch.match(/^#{jira_project}-\d*/).to_s
-  potloc_ticket ||= current_branch.match(/^FIX.*/).to_s
-  potloc_ticket ||= current_branch.match(/^WIP.*/).to_s
-  potloc_ticket
+  current_branch.match(/^\w*-?\d*/).to_s
 end
 
 def potloc_commit_message
-  [potloc_ticket, commit_message].compact.join(" ")
+  [jira_issue_number, commit_message].compact.join(" ")
 end
 
 system("git commit -m \"#{potloc_commit_message}\"")
