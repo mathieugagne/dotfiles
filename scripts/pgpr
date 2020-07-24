@@ -26,7 +26,7 @@ end
 
 def accomplishments
   commits.map do |commit|
-    %(- [x] #{commit.match(/^#{jira_issue}\W(.*)/)[1]})
+    %(- [x] #{commit.match(/^\w*-?\d*\W(.*)/)[1]})
   end.join("\n")
 end
 
