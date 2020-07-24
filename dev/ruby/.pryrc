@@ -9,7 +9,7 @@ if defined?(PryByebug)
   Pry.commands.alias_command 'bda', 'break --disable-all'
 end
 
-if defined? PryRescue
+if defined?(PryRescue)
   Pry.commands.alias_command 'ta', 'try-again'
   Pry.commands.alias_command 'rc', 'reload-code'
 end
