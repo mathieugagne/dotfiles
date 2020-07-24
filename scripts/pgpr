@@ -1,20 +1,18 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
+require "active_support/core_ext/object"
+
 PROJECT_SHORT_NAMES = %w(POT HLP FIX RAK)
 
 def current_branch
   `git rev-parse --abbrev-ref HEAD`.strip
 end
 
-def jira_project
-  @jira_project ||= current_branch.split("-").first
-end
-
 def jira_issue
-  @jira_issue_number ||= begin
-    match = current_branch.match(/^(\w*-?\d*)/)
-    match && match[1]
+  @jira_issue ||= begin
+    current_branch = `git rev-parse --abbrev-ref HEAD`
+    current_branch.match(/^\w*-?\d*/).to_s
   end
 end
 
@@ -27,19 +25,26 @@ def jira_description
 end
 
 def accomplishments
-  commits = `git log --pretty="%s" origin/develop..HEAD`.split("\n").reverse.map(&:strip)
   commits.map do |commit|
-    %(- [x] #{commit.match(/^#{jira_project}-?\d*\W(.*)/)[1]})
+    %(- [x] #{commit.match(/^#{jira_issue}\W(.*)/)[1]})
   end.join("\n")
 end
 
+def commits
+  `git log --pretty="%s" origin/develop..HEAD`.split("\n").reverse.map(&:strip)
+end
+
 def github_pr_title
+  return commits.first if commits.length == 1
+
   [jira_issue, jira_summary].compact.join(" ")
 end
 
 def github_pr_message
+  return "" if jira_issue.blank? || jira_summary.blank?
+
   "### Why\n\n" \
-  "#{jira_description}\n\n" \
+  "> #{jira_description}\n\n" \
   "### Ticket\n\n" \
   "https://potloc.atlassian.net/browse/#{jira_issue}\n\n" \
   "### Accomplishments\n\n" \
@@ -48,16 +53,9 @@ def github_pr_message
   "_none_"
 end
 
-if jira_project == "FIX"
-  system("hub pull-request --base develop \
-                           --push \
-                           --draft \
-                           --assign mathieugagne")
-else
-  system("hub pull-request --base develop \
-                           --push \
-                           --draft \
-                           --assign mathieugagne \
-                           --message \"#{github_pr_title}\" \
-                           --message \"#{github_pr_message}\"")
-end
+system("hub pull-request --base develop \
+                         --push \
+                         --draft \
+                         --assign mathieugagne \
+                         --message \"#{github_pr_title}\" \
+                         --message \"#{github_pr_message}\"")
