@@ -1,5 +1,5 @@
-alias cdw="cd ~/workspace/"
-alias cdp="cd ~/personal/"
+alias cdw="cd ~/workspace/potloc"
+alias cdp="cd ~/workspace/personal"
 
 alias ll="ls -lAh"
 alias psgrep="ps aux | grep"
