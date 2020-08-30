@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 nordvpn_status=$(nordvpn status | grep Status | awk '{ print $2 }')
 
