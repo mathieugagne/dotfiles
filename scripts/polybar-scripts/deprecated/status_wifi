@@ -1,6 +1,6 @@
 #!/bin/dash
 
-WIFI_DEVICE_NAME="$(nmcli device | grep wifi | awk '{ print $1 }')"
+WIFI_DEVICE_NAME="$(nmcli device | grep 'wifi[^-]' | awk '{ print $1 }')"
 WIFI_STATUS=$(cat /sys/class/net/$WIFI_DEVICE_NAME/operstate);
 # CONNECTION=$(nmcli -t -f name connection show --active);
 if [ "$WIFI_STATUS" = "up" ];
