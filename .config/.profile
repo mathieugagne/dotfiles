@@ -57,3 +57,8 @@ export PATH="$HOME/dotfiles/scripts:$PATH"
 if [ -f "$HOME/dotfiles/scripts/.env" ]; then
   . "$HOME/dotfiles/scripts/.env"
 fi
+
+# Secret ENV variables
+if [ -f "$HOME/dotfiles/.config/.env" ]; then
+  . "$HOME/dotfiles/.config/.env"
+fi
