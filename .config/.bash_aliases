@@ -1,5 +1,6 @@
 alias cdw="cd ~/workspace/potloc"
 alias cdp="cd ~/workspace/personal"
+alias cdu="cd ~/workspace/unisafety"
 
 alias ll="ls -lAh"
 alias psgrep="ps aux | grep"
@@ -37,6 +38,7 @@ alias ru='bundle exec rubocop --auto-correct'
 alias rua='bundle exec rubocop --auto-gen-config'
 alias bw="bin/webpack-dev-server"
 alias bs="bin/sidekiq"
+alias bu="bundle update"
 
 # Docker
 alias dc='docker-compose'
