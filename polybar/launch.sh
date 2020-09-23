@@ -10,6 +10,6 @@ source ~/dotfiles/polybar/.env
 
 # Launch top and bottom bars
 polybar top &
-polybar bottom &
+# polybar bottom &
 
 echo "Bars launched..."
