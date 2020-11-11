@@ -50,9 +50,9 @@ alias tfa='terraform apply -auto-approve'
 
 # js
 pw() {
-  ./node_modules/.bin/stylelint --fix "$1/**/*.scss";
-  ./node_modules/.bin/tslint --fix "$1/**/*.ts*";
-  ./node_modules/.bin/prettier --write "$1/**/*.tsx";
+  yarn stylelint --fix "$1/**/*.scss";
+  yarn eslint --fix "$1/**/*.js";
+  yarn prettier --write "$1/**/*.tsx";
 }
 
 # bundle
