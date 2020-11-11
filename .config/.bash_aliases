@@ -79,6 +79,8 @@ alias gback="git reset --soft HEAD~1 ; git reset"
 # Overrides zsh original. This one only removes untracked files, without touching .gitignore rules.
 alias gclean="git status --porcelain | grep '??' | sed 's/^...//' | xargs /bin/rm -rf"
 alias grho="gfa && grhh origin/$(git_current_branch)"
+alias pgcmsg="jpg commit"
+alias pgcmsg!="OVERCOMMIT_DISABLED=1 jpg commit"
 
 ggr() {
   gg $1 -- "**/*.rb"
