@@ -8,6 +8,10 @@ alias psgrep="ps aux | grep"
 # Utilities
 alias xclip="xclip -selection c"
 
+# Monitoring
+alias cpu='ps axch -o cmd:15,%cpu --sort=-%cpu | head'
+alias mem='ps axch -o cmd:15,%mem --sort=-%mem | head'
+
 # Goodies
 # https://gist.github.com/khakimov/3558086
 matrix() {
