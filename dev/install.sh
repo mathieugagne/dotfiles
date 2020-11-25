@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+dev/aws/install.sh
 dev/ruby/install.sh
 dev/gh/install.sh
 dev/go/install.sh
