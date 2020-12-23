@@ -8,3 +8,9 @@
   current-branch = !git rev-parse --abbrev-ref HEAD
 [pager]
   branch = false
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[diff]
+	colorMoved = zebra
