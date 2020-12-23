@@ -25,8 +25,10 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# vim
+# Preferences
 export EDITOR=vim
+export TERMINAL=urxvt
+
 # Set cap locks as escape for easy vim
 if hash setxkbmap 2>/dev/null; then
     setxkbmap -option caps:swapescape
