@@ -67,6 +67,9 @@ alias fs="be foreman start"
 alias bcs="be cap staging"
 alias bcp="be cap production"
 
+# tiguidou
+alias tgdo="tiguidou"
+
 # git
 alias gbclean="git checkout develop && git branch --merged | grep -v develop | xargs git branch -d"
 alias gbpurge="git branch | grep -v -E \"master|develop\" | xargs git branch -D"
@@ -83,8 +86,8 @@ alias gback="git reset --soft HEAD~1 ; git reset"
 # Overrides zsh original. This one only removes untracked files, without touching .gitignore rules.
 alias gclean="git status --porcelain | grep '??' | sed 's/^...//' | xargs /bin/rm -rf"
 alias grho="gfa && grhh origin/$(git_current_branch)"
-alias pgcmsg="jpg commit"
-alias pgcmsg!="OVERCOMMIT_DISABLED=1 jpg commit"
+alias pgcmsg="tgdo commit"
+alias pgcmsg!="OVERCOMMIT_DISABLED=1 tgdo commit"
 
 ggr() {
   gg $1 -- "**/*.rb"
