@@ -47,10 +47,18 @@ alias bu="bundle update"
 # Docker
 alias dc='docker-compose'
 
+alias drr='bin/docker/runner'
+alias drs='bin/docker/server'
+alias drc='bin/docker/rails c'
+alias drp='bin/docker/rspec'
+alias dbs='bin/docker/sidekiq'
+alias dbw='bin/docker/webpack-dev-server'
+
 # Terraform
 alias tf='terraform'
 alias tfp='terraform plan'
 alias tfa='terraform apply -auto-approve'
+alias tfw='terraform workspace'
 
 # js
 pw() {
