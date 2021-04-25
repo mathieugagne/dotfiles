@@ -8,14 +8,22 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# Enable numlock on keyboard
-/usr/bin/numlockx on
+if hash numlockx 2>/dev/null; then
+  # Enable numlock on keyboard
+  /usr/bin/numlockx on
+fi
 
-# Increase repeat key rate
-/usr/bin/xset r rate 220 40
+if hash xset 2>/dev/null; then
+  # Increase repeat key rate
+  /usr/bin/xset r rate 220 40
+fi
 
-# Allow additional keyboard layout
-/usr/bin/setxkbmap -layout "us,ca"
+if hash setxkbmap 2>/dev/null; then
+  # Allow additional keyboard layout
+  setxkbmap -layout "us,ca"
+  # Set cap locks as escape for easy vim
+  setxkbmap -option caps:swapescape
+fi
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -28,11 +36,6 @@ fi
 # Preferences
 export EDITOR=vim
 export TERMINAL=urxvt
-
-# Set cap locks as escape for easy vim
-if hash setxkbmap 2>/dev/null; then
-    setxkbmap -option caps:swapescape
-fi
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
