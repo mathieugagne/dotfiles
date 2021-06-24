@@ -16,7 +16,7 @@ dunst/install.sh
 spotify/install.sh
 vscode/install.sh
 slack/install.sh
-ttygif/install.sh
+# ttygif/install.sh
 .config/install.sh
 
 sudo apt autoremove
