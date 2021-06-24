@@ -26,3 +26,5 @@ mkdir -p ~/.config/polybar
 ln -fs ~/dotfiles/polybar/themes/dracula-top-only.ini ~/.config/polybar/config
 # ln -fs ~/dotfiles/polybar/themes/monokai.ini ~/.config/polybar/config
 # ln -fs ~/dotfiles/polybar/themes/sentakuhm.ini ~/.config/polybar/config
+
+ln -fs ~/.config/dotfiles/.polybar.env ~/dotfiles/polybar/.env
