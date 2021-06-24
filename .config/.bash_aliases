@@ -54,6 +54,7 @@ alias drp='bin/docker/rspec'
 alias dbs='bin/docker/sidekiq'
 alias dbw='bin/docker/webpack-dev-server'
 alias dru='dc exec runner bundle exec rubocop --auto-correct'
+alias bds='bin/docker/setup'
 
 # Terraform
 alias tf='terraform'
@@ -92,6 +93,7 @@ alias grbiom="gfa && grbi origin/master"
 alias grbiod="gfa && grbi origin/develop"
 alias gft="git fetch --tags --prune"
 alias gback="git reset --soft HEAD~1 ; git reset"
+alias greset="gfa && git reset --soft origin/develop && git reset"
 # Overrides zsh original. This one only removes untracked files, without touching .gitignore rules.
 alias gclean="git status --porcelain | grep '??' | sed 's/^...//' | xargs /bin/rm -rf"
 alias grho="gfa && grhh origin/$(git_current_branch)"
@@ -99,6 +101,7 @@ alias grho="gfa && grhh origin/$(git_current_branch)"
 alias pgcmsg="tgdo commit"
 alias pgcmsg!="OVERCOMMIT_DISABLED=1 tgdo commit"
 alias pgwip="gaa && pgcmsg! 'WIP'"
+alias ggwp="gaa && pgcmsg! 'WIP'"
 
 # git root branch for splitting pull requests
 gbn() {
