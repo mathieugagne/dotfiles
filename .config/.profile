@@ -25,6 +25,11 @@ if hash setxkbmap 2>/dev/null; then
   setxkbmap -option caps:swapescape
 fi
 
+if hash libinput-gestures-setup 2>/dev/null; then
+  # Use defined gestures on touchpad
+  /usr/bin/libinput-gestures-setup autostart start
+fi
+
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
