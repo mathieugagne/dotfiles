@@ -13,11 +13,6 @@ if hash numlockx 2>/dev/null; then
   /usr/bin/numlockx on
 fi
 
-if hash xset 2>/dev/null; then
-  # Increase repeat key rate
-  /usr/bin/xset r rate 220 40
-fi
-
 if hash setxkbmap 2>/dev/null; then
   # Allow additional keyboard layout
   setxkbmap -layout "us,ca"
@@ -25,17 +20,12 @@ if hash setxkbmap 2>/dev/null; then
   setxkbmap -option caps:swapescape
 fi
 
-if hash libinput-gestures-setup 2>/dev/null; then
-  # Use defined gestures on touchpad
-  /usr/bin/libinput-gestures-setup autostart start
-fi
-
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-      . "$HOME/.bashrc"
-    fi
+  # include .bashrc if it exists
+  if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+  fi
 fi
 
 # Preferences
