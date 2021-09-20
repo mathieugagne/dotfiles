@@ -60,8 +60,14 @@ alias bds='bin/docker/setup'
 # Terraform
 alias tf='terraform'
 alias tfp='terraform plan'
+alias tfr='terraform refresh'
 alias tfa='terraform apply -auto-approve'
 alias tfw='terraform workspace'
+alias tfi='terraform -chdir=infra'
+alias tfip='terraform -chdir=infra plan'
+alias tfir='terraform -chdir=infra refresh'
+alias tfia='terraform -chdir=infra apply -auto-approve'
+alias tfiw='terraform -chdir=infra workspace'
 
 # js
 pw() {
