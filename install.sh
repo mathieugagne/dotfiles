@@ -19,6 +19,4 @@ slack/install.sh
 # ttygif/install.sh
 .config/install.sh
 
-ln -fs ~/.config/dotfiles/.scripts.env ~/dotfiles/scripts/.env
-
 sudo apt autoremove
