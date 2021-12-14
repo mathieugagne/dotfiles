@@ -11,5 +11,6 @@ sudo gpasswd -a $USER input
 # https://askubuntu.com/questions/1122513/how-to-add-natural-inverted-mouse-scrolling-in-i3-window-manager
 # https://blog.spirotot.com/posts/dell-xps-15-9550-arch-linux-trackpad-gestures/
 # TODO: Use `xinput set-prop` to automatically set this
+xinput set-prop "DELL097D:00 04F3:311C Touchpad" "libinput Natural Scrolling Enabled" 1
 
 ln -fs ~/dotfiles/gestures/libinput-gestures.conf ~/.config/libinput-gestures.conf
