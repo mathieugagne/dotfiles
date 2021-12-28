@@ -14,6 +14,7 @@ sudo apt install -y feh neofetch mpv scrot nitrogen pavucontrol
 # Monitoring
 sudo apt install -y htop iftop
 utils/gotop/install.sh
+utils/nethogs/install.sh
 
 # Tweaks
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
