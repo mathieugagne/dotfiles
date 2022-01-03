@@ -37,12 +37,9 @@ alias rc='bin/rails c'
 alias rp='bin/rspec'
 alias rsp='EXCLUDE_SYSTEM_TESTS=true EXCLUDE_INTEGRATION_TESTS=true bin/rspec'
 alias rpof='bin/rspec --only-failures'
-alias re='bundle exec reek'
-alias ru='bundle exec rubocop --auto-correct'
-alias rua='bundle exec rubocop --auto-gen-config'
+alias ru='rubocop --auto-correct'
+alias rua='rubocop --auto-gen-config'
 alias bw="bin/webpack-dev-server"
-alias bs="bin/sidekiq"
-alias bu="bundle update"
 
 # Docker
 alias dc='docker-compose'
