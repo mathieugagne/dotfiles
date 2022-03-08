@@ -16,6 +16,7 @@ dunst/install.sh
 spotify/install.sh
 vscode/install.sh
 slack/install.sh
+heroku/install.sh
 # ttygif/install.sh
 .config/install.sh
 
