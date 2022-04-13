@@ -3,7 +3,7 @@
 sudo apt update
 
 # Tools
-sudo apt install -y wget htop tree curl git vim bmon iftop xclip jq
+sudo apt install -y wget htop tree curl git vim bmon iftop xclip jq direnv
 
 # Software
 sudo apt install -y ranger
