@@ -3,9 +3,13 @@
   name = Mathieu Gagné
 	username = mathieugagne
 
+[core]
+  pager = delta
 [alias]
   purge = !ppurge
   current-branch = !git rev-parse --abbrev-ref HEAD
+[blame]
+  pager = delta
 [pager]
   branch = false
 [pull]
@@ -14,3 +18,11 @@
 	prune = true
 [diff]
 	colorMoved = zebra
+[merge]
+  conflictstyle = diff3
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  line-numbers = true
+  navigate = true  # use n and N to move between diff sections
+  side-by-side = true
