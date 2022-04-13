@@ -8,3 +8,6 @@ rm get-pip.py
 # AWS & Beanstalk
 pip install awsebcli --upgrade --user
 pip install awscli --upgrade --user
+
+# Other useful tools
+pip install pgcli --upgrade --user
