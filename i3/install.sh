@@ -22,3 +22,6 @@ mkdir -p ~/.config/i3
 ln -fs ~/dotfiles/i3/config.laptop.ini ~/.config/i3/config
 # ln -fs ~/dotfiles/i3/config.desktop.ini ~/.config/i3/config
 ln -fs ~/.config/dotfiles/.i3.env ~/dotfiles/i3/.env
+
+
+laptop/display/install.sh

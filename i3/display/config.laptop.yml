@@ -1,0 +1,6 @@
+displays:
+  - name: eDP-1-1
+    workspaces: [2,3,5,7,8,9,0]
+  - name: DP-1-1
+    workspaces: [1,4,6]
+    randr_extra_options: "--left-of eDP-1-1"
