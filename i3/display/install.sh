@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# https://github.com/lpicanco/i3-autodisplay
+
 rm -rf /tmp/i3-autodisplay
 git clone https://github.com/lpicanco/i3-autodisplay.git /tmp/i3-autodisplay
 cd /tmp/i3-autodisplay
