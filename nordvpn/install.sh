@@ -4,3 +4,5 @@ wget -q https://repo.nordvpn.com/deb/nordvpn/debian/pool/main/nordvpn-release_1.
 sudo apt install /tmp/nordvpn.deb
 sudo apt update -y
 sudo apt install nordvpn
+
+nordvpn set threatprotectionlite on
